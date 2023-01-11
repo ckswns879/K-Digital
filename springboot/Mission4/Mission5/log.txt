@@ -1,2 +1,0 @@
-get,select * from member where id=2,true
-get,select * from member order by id asc,true
