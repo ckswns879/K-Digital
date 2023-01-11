@@ -1,0 +1,13 @@
+get,select * from member order by id asc,true
+post,insert into member (id,name,pass,regdate) values (2,'insert2','222','2022-12-08'),true
+get,select * from member order by id asc,true
+get,select * from member where id=2,true
+put,update member set name='2번h2update',pass='2번h2update' where id=2,true
+get,select * from member order by id asc,true
+get,select * from member order by id asc,true
+delete,delete from member where id=2,true
+get,select * from member order by id asc,true
+get,select * from member order by id asc,true
+post,insert into member (id,name,pass,regdate) values (2,'insert2','222','2022-12-08'),true
+get,select * from member where id=2,true
+put,update member set name='2번h2update',pass='2번h2update' where id=2,true
