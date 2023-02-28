@@ -1,0 +1,5 @@
+package com.project.jwt;
+
+public class JwtAuthenticationEntryPoint {
+
+}
