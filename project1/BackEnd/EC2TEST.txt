@@ -1,0 +1,35 @@
+https://bcp0109.tistory.com/356(EC2만들기~ 보안설정까지) ec2 정지만안하면, 고정ip안받아도됨 
+
+스프링파일은 런에즈  >> 메이븐 인스톨 하면 jar파일만들어짐
+
+jar,pem 같은폴더에
+
+cmd창 경로는 pem 파일이있는곳에서
+
+업로드는 그냥 cmd 창에서
+scp -i [pem파일경로] [업로드할 파일 이름] [ec2-user계정명]@[ec2 instance의 public DNS]:~/[경로]
+
+scp -i "C:\Users\user\Desktop\p2\my-key.pem" p1.jar ubuntu@ec2-15-165-69-102.ap-northeast-2.compute.amazonaws.com:~/
+
+
+
+
+AWS EC2 우분투접속
+ssh -i "파일이름.pem" ubuntu@[퍼블릭 IPv4 DNS]
+
+ssh -i "my-key.pem" ubuntu@ec2-15-165-69-102.ap-northeast-2.compute.amazonaws.com
+
+
+
+업로드된 자바파일 우분투에서 실행(자바버전, jdk버전확인)
+java -jar [파일이름].jar 
+
+java -jar p1.jar 
+
+
+ec2 배포하기 우분투에서 실행
+sudo netstat -tnlp   (netstat 설치해야함) EC2에서 실행 중인 것들을 볼 수 있다.
+
+sudo nohup java -jar server.jar &
+nohup 명령어는 리눅스에서 프로세스를 실행한 터미널의 세션 연결이 끊어지더라도 지속적으로 동작 할 수 있게 해주는 명령어
+nohup 명령어의 의미는 위와 같습니다. 그리고 마지막에 &를 추가하면 jar 파일이 백그라운드로 실행될 수 있게 한다.
