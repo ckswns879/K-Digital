@@ -10,7 +10,7 @@ public class PaymentLogVO {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private Long id;
 	private String item; // 청구품목
 	private String invoice; // 청구서번호
 	private String leadtime; // 리드타임
@@ -22,7 +22,7 @@ public class PaymentLogVO {
 		// TODO Auto-generated constructor stub
 	}
 
-	public PaymentLogVO(long id, String item, String invoice, String leadtime, String clients, int order_quantity,
+	public PaymentLogVO(Long id, String item, String invoice, String leadtime, String clients, int order_quantity,
 			int order_amount) {
 		super();
 		this.id = id;
@@ -41,11 +41,11 @@ public class PaymentLogVO {
 				+ "]";
 	}
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

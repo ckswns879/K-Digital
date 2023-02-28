@@ -9,7 +9,7 @@ import javax.persistence.Id;
 public class BasketVO {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private Long id;
 	private String email;
 	private String item; // 청구품목
 	private int leadtime; // 리드타임
@@ -20,7 +20,7 @@ public class BasketVO {
 		// TODO Auto-generated constructor stub
 	}
 
-	public BasketVO(long id, String email, String item, int leadtime, int billing_amount, String clients) {
+	public BasketVO(Long id, String email, String item, int leadtime, int billing_amount, String clients) {
 		super();
 		this.id = id;
 		this.email = email;
@@ -36,11 +36,11 @@ public class BasketVO {
 				+ ", billing_amount=" + billing_amount + ", clients=" + clients + "]";
 	}
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -83,6 +83,5 @@ public class BasketVO {
 	public void setClients(String clients) {
 		this.clients = clients;
 	}
-	
-    
+
 }

@@ -9,6 +9,7 @@ import javax.persistence.Id;
 public class ItemInfoVO {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 	private String subjects; // Subject
 	private String machinery; // Machinery
 	private String assembly; // Assembly
@@ -25,9 +26,10 @@ public class ItemInfoVO {
 		// TODO Auto-generated constructor stub
 	}
 
-	public ItemInfoVO(String subjects, String machinery, String assembly, String item, String part1, String part2,
-			String key2, int esti_unit_price, String clients, String currency, int leadtime) {
+	public ItemInfoVO(Long id, String subjects, String machinery, String assembly, String item, String part1,
+			String part2, String key2, int esti_unit_price, String clients, String currency, int leadtime) {
 		super();
+		this.id = id;
 		this.subjects = subjects;
 		this.machinery = machinery;
 		this.assembly = assembly;
@@ -43,9 +45,17 @@ public class ItemInfoVO {
 
 	@Override
 	public String toString() {
-		return "ItemInfoVO [subjects=" + subjects + ", machinery=" + machinery + ", assembly=" + assembly + ", item="
-				+ item + ", part1=" + part1 + ", part2=" + part2 + ", key2=" + key2 + ", esti_unit_price="
+		return "ItemInfoVO [id=" + id + ", subjects=" + subjects + ", machinery=" + machinery + ", assembly=" + assembly
+				+ ", item=" + item + ", part1=" + part1 + ", part2=" + part2 + ", key2=" + key2 + ", esti_unit_price="
 				+ esti_unit_price + ", clients=" + clients + ", currency=" + currency + ", leadtime=" + leadtime + "]";
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getSubjects() {
