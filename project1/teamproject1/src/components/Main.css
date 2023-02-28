@@ -1,0 +1,181 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  font-family: 
+  /* "Pretendard-Regular", */ "GmarketSansMedium";
+}
+
+.left-tabs-example {
+  background-color: hsl(0, 84%, 51%);
+}
+.Navber {
+  width: 100%;
+  left: 0px;
+  top: 0px;
+}
+
+.Navber1 {
+  left: 0px;
+  top: 0px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  /* left: 0px;
+  top: 0px; */
+justify-content: flex-start!important;
+}
+.tab2 {
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+}
+.col-sm-4 {
+  align-items: baseline;
+}
+
+#wrap {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+section {
+  margin-bottom: 10px;
+}
+
+.tab2-1 {
+  font-size: x-large;
+  /* text-align: center; */
+}
+
+/* 출력시 애니메이션효과 */
+.start {
+  /* scale: 0.7; */
+  opacity: 0;
+}
+.end {
+  /* scale: 1; */
+  opacity: 1;
+  transition: all 1s;
+}
+.start1 {
+  /* scale: 0.7; */
+  opacity: 0;
+}
+.end1 {
+  /* scale: 1; */
+  opacity: 1;
+  transition: all 1s;
+}
+
+/* 1page 모든DB조회 메뉴바 */
+
+.page1h1 {
+  
+}
+
+.me-main {
+  font-size: 30px;
+}
+
+.me-auto {
+  font-size: 20px;
+}
+
+.col1 {
+  padding: auto;
+  margin-right: 10%;
+}
+
+.container {
+  /* flex-direction: column;
+  justify-content: center;
+  padding: 17px; */
+}
+
+table {
+  border-spacing: 0;
+  border: 1px solid #d1cccc;
+}
+
+tr:last-child td {
+  border-bottom: 0;
+}
+
+th,
+td {
+  margin: 0;
+  padding: 0.5rem;
+  border-bottom: 1px solid #d1cccc;
+  border-right: 1px solid #d1cccc;
+}
+
+th:last-child,
+td:last-child {
+  border-right: 0;
+}
+
+tr:nth-child(odd) {
+  background: #f3f3f3;
+  color: #000000;
+}
+
+tr:nth-child(even) {
+  background: #ffffff;
+  color: #000000;
+}
+
+th.desc {
+  border-bottom: 5px solid rgb(136, 136, 255);
+}
+
+th.asc {
+  border-top: 5px solid orange;
+}
+
+.main123 {
+  display: flex;
+}
+
+
+
+
+
+
+
+
+
+.fade{
+  margin-top: 48px;
+  margin-left: 10px;
+  margin-bottom: 30px;
+}
+/* 로고 벽에붙이기 */
+.logo{
+  /* position: absolute;
+  left: 0px;
+  top: 50px;
+  Transform : translatey(-50%); */
+
+}
+.nav-link {
+  padding: 30px;
+  text-align: center;
+  font-size: 19px;
+
+}
+
