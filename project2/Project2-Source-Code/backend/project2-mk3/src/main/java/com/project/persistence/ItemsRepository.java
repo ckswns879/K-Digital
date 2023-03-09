@@ -14,6 +14,6 @@ public interface ItemsRepository extends JpaRepository<ItemInfo, Long> {
 	
 	List<ItemInfo> findByPart1Containing(String part1);
 	
-	List<ItemInfo> findByClientContaining(String client);
+	List<ItemInfo> findByClientsContaining(String client);
 
 }

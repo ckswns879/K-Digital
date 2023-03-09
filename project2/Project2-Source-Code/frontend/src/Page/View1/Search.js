@@ -1,5 +1,7 @@
+import "./View1.css";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from "react-router-dom";
 import { getSearchInfoRD } from "../../Component/Store/Store";
 
 //검색 및 검색어 자동완성 기능
@@ -12,7 +14,6 @@ function Search() {
   const [data, setData] = useState(null);
   const [selected, setSelected] = useState("");
   const [selectedOption, setSelectedOption] = useState("");
-  const [searchResults, setSearchResults] = useState([]);
 
   //검색조건 리스트
   const selectList = ["===검색항목선택===", "발주처", "부품대분류", "부품명", "부품번호"];
@@ -23,7 +24,7 @@ function Search() {
     setSelected(e.target.value);
     //조건 선택하면 자동완성목록 띄우기 위한 데이터 정제(선택된 필드 추출 및 중복제거)
     if (e.target.value === "발주처") {
-      setData([...new Set(SelectList.map((item) => item.baljucheo))]);
+      setData([...new Set(SelectList.map((item) => item.clients))]);
     } else if (e.target.value === "부품대분류") {
       setData([...new Set(SelectList.map((item) => item.machinery))]);
     } else if (e.target.value === "부품명") {
@@ -76,7 +77,7 @@ function Search() {
             </option>
           ))}
         </select>
-        <form onSubmit={searchData}>
+        <form className="inputform" onSubmit={searchData}>
           {/* 입력시 대소문자 구분 필요 - 필요 없이 만들어야 할까? */}
           <input
             className="searchItemInput"
@@ -90,7 +91,7 @@ function Search() {
               <option key={option} value={option} />
             ))}
           </datalist>
-          <button type="submit">검색</button>
+          <button className="searchButton" type="submit">검색</button>
         </form>
       </div>
     </>

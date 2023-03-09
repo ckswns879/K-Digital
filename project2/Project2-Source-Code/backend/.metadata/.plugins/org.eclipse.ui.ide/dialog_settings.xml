@@ -88,13 +88,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
-			<item value="C:\git java\project2\Project2-Source-Code\backend\project2"/>
-			<item value="C:\Users\slows\Desktop\PNUProject2\backend"/>
-			<item value="C:\Users\user\Desktop\PNUProject2\backend"/>
-			<item value="C:\Users\user\Desktop\PNUProject_2\backend"/>
-			<item value="C:\Users\slows\Desktop\PNUProject_2\backend\leadtime"/>
+			<item value="C:\p2m\Project2-Source-Code\backend\project2-jwt"/>
+			<item value="C:\p2m\Project2-Source-Code\backend"/>
 		</list>
-	</section>
-	<section name="ExternalProjectImportWizard">
 	</section>
 </section>

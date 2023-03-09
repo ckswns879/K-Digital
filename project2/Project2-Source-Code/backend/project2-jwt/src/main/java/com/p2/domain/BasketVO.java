@@ -1,14 +1,18 @@
 package com.p2.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class BasketVO {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "basket_id")
 	private Long id;
 	private String email;
 	private String item; // 청구품목
@@ -16,11 +20,19 @@ public class BasketVO {
 	private int billing_amount; // 청구량
 	private String clients; // 발주처
 
+	@ManyToOne
+	@JoinColumn(name = "item_id", nullable = false, updatable = false)
+	private ItemInfoVO items;
+
+	@ManyToOne
+	@JoinColumn(name = "member_id", nullable = false, updatable = false)
+	private MemberVO member;
+
 	public BasketVO() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public BasketVO(Long id, String email, String item, int leadtime, int billing_amount, String clients) {
+	public BasketVO(long id, String email, String item, int leadtime, int billing_amount, String clients) {
 		super();
 		this.id = id;
 		this.email = email;
@@ -36,11 +48,11 @@ public class BasketVO {
 				+ ", billing_amount=" + billing_amount + ", clients=" + clients + "]";
 	}
 
-	public Long getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 

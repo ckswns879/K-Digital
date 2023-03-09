@@ -35,9 +35,9 @@ public class ItemInfo {
 	private String part1;			//part1
 	private String part2;			//part2
 	private String key2;			//key2
-	private String leadtime;		//리드타임
+	private int leadtime;		//리드타임
 	private String clients;			//발주처
-	private String esti_unit_price;	//견적단가
+	private int esti_unit_price;	//견적단가
 	private String currency;		//견적화폐
 	
 	@OneToMany(mappedBy = "item", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)

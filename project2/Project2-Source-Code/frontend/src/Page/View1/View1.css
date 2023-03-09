@@ -1,0 +1,198 @@
+/* View1Main.js */
+.view1 {
+  margin: 100px ;
+}
+
+.view1Main {
+  width: 90vw;
+}
+
+/* Search.js */
+.Searchh2 {
+  margin: 1vh 1vw 1vh 1vw;
+  color: #6255f6;
+}
+
+.itemSearchView {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5fa;
+  margin: 10px 0;
+  padding: 0 5px;
+  border-radius: 25px;
+}
+
+.searchItemCategory {
+  height: 30px;
+  padding: 0 2vw;
+  margin: 1vw;
+  border: none;
+  border-radius: 25px;
+}
+
+.searchItemCategory:focus {
+  outline: none;
+}
+
+.searchItemInput {
+  height: 30px;
+  padding: 0 1vw 0 2vw;
+  margin: 1vh 2vw 1vh 1vw;
+  background-color: #fff;
+  border: none;
+  border-radius: 25px;
+}
+
+.searchItemInput:focus {
+  outline: 0.125rem solid #6255f6;
+}
+
+.searchButton {
+  height: 30px;
+  width: 60px;
+  padding : 3;
+  border: 2px solid #6255f6;
+  border-radius: 15px;
+  background-color: #fff;
+  color: #6255f6;
+}
+
+.searchButton:hover {
+  height: 30px;
+  width: 60px;
+  padding : 3;
+  border: 2px solid #6255f6;
+  border-radius: 15px;
+  background-color: #6255f6;
+  color: #74e88b;
+}
+
+.inputform {
+  width: 70vw;
+  display: flex;
+  align-items: center;
+}
+
+/* SelectedList */
+.searchTable {
+  width:90vw;
+  word-break: break-all;
+  height: 50vh;
+  margin: 10px 0 30px 0;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-collapse: collapse;
+}
+
+.searchTable th{
+  padding: 8px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 12px;
+  color: black;
+  text-transform: uppercase;
+}
+
+.searchTable td {
+  padding: 8px 8px 8px 10px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 12px;
+  color: black;
+  border-top: 1px solid #c5c5c5;
+}
+
+.th2 {
+  width: 30vw;
+}
+
+.listLink {
+  text-decoration: none;
+  color: #6255f6;
+  font-weight: 500;
+}
+
+.th1 {
+  width: 30px;
+}
+
+.th3 {
+  width: 10vw;
+}
+
+.thcost {
+  text-align: right;
+  padding-right: 2vw;
+  width: 8vw;
+}
+
+.pageButton {
+  float: right;
+  margin: 5px;
+  width: 70px;
+  height: 50px;
+  padding: 3px 3px 3px 3px;
+  border: 2px solid #6255f6;
+  border-radius: 15px;
+  background-color: #fff;
+  text-align: center;
+  text-decoration: none;
+  color: #6255f6;
+}
+
+.pageButton:hover {
+  background-color: #6255f6;
+  color: #74e88b;
+}
+
+@media (max-width: 744px) {
+  .itemSearchView {
+    display: block;
+    align-items: center;
+  }
+
+  .toCart {
+    float: right;
+    margin: 2vh 0;
+    color: black;
+    width: 24vw;
+  }
+}
+
+@media (max-width: 430px) {
+  .itemSearchView {
+    display: block;
+    align-items: center;
+  }
+
+  .searchItemCategory {
+    height: 30px;
+    padding: 0 1vw;
+    margin: 1vw;
+    width: 73vw;
+  }
+
+  .inputform {
+    width: 90vw;
+    display: flex;
+    align-items: center;
+  }
+
+  .searchItemInput {
+    width: 70vw;
+  }
+
+  .searchButton {
+    height: 25px;
+    padding : 0;
+    width: 50px;
+  }
+
+  .toCart {
+    float: right;
+    margin: 2vh 0;
+    color: black;
+    width: 24vw;
+  }
+  
+}

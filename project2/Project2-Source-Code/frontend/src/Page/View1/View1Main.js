@@ -1,6 +1,7 @@
+import "./View1.css";
 import React, { useState, useEffect } from "react";
 import { useSelector } from 'react-redux';
-import { Link } from "react-router-dom";
+import { BsSearch } from "react-icons/bs";
 import Search from "./Search";
 import SelectedList from "./SelectedList";
 
@@ -29,10 +30,12 @@ function View1Main() {
 
   return (
     <>
-      <div className="view1Main">
-        <Search />
-        {visible && <SelectedList />}
-        <button><Link to='/view3'>장바구니 이동</Link></button>
+      <div className="view1">
+        <div className="view1Main">
+          <h2 className="Searchh2"><BsSearch /> Search</h2>
+          <Search />
+          {visible && <SelectedList />}
+        </div>
       </div>
     </>
   );

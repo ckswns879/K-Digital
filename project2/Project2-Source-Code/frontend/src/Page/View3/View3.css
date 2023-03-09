@@ -1,0 +1,167 @@
+/* View3Main */
+.view3Main {
+  margin: 100px ;
+}
+
+.carth2 {
+  margin: 1vh 1vw 0vh 1vw;
+  color: #6255f6;
+}
+
+.orderNav {
+  bottom: 30px;
+  position: fixed;
+  align-items: center;
+}
+
+.basket {
+  background-color: #f5f5fa;
+  color: #6255f6;
+  border: none;
+  border-radius: 35px;
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  margin: 3px;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+}
+
+.basket:hover{
+  background-color: #6255f6;
+  border-radius: 35px;
+  color: #74e88b;
+}
+
+/* BasketDate */
+.OrderList {
+  margin: 20px 0 30px 0;
+  height: 65vh;
+  overflow-y: scroll;
+}
+
+.orderTable {
+  word-break: break-all;
+  height: auto;
+  border-top: 1px solid;
+  border-bottom: 1px solid #6d6d6d;
+  border-collapse: collapse;
+  margin-top: 5px;
+  width: 65vw;
+}
+
+.orderTable th{
+  padding: 8px 6px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 12px;
+  color: black;
+  text-transform: uppercase;
+}
+
+.orderTable td {
+  padding: 8px 6px 8px 6px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 12px;
+  color: black;
+  border-top: 1px solid #c5c5c5;
+}
+
+.th2 {
+  width: 15vw;
+}
+
+.td3 {
+  width: 5vw;
+}
+
+.leadtimeByCategory {
+  margin: 5px 10px 20px 0;
+  justify-content: flex-end;
+  display: flex;
+  gap: 2vw;
+}
+
+.categoryName {
+  font-size: large;
+  border: #74e88b 3px solid;
+  width: 10vw;
+  text-align: center;
+  border-radius: 20px;
+  color: #74e88b;
+}
+
+.View3Main {
+  display: flex;
+  flex-direction: row;
+}
+
+.calender {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.thead {
+  position: sticky;
+  top: 0;
+  background-color: #f5f5fa;
+  margin-top: 0;
+}
+
+.th1 {
+  width: 10vw;
+  padding: 8px, 2px;
+}
+
+.check {
+  width: 4px;
+  padding: 8px 0;
+  margin: 0;
+}
+
+.ox {
+  padding: 10px;
+}
+
+.li {
+  padding: 5px 3px;
+}
+
+/* Calender */
+.calender {
+  border: #6255f6 3px solid;
+  border-radius: 25px;
+  padding: 15px;
+  color: #6255f6;
+}
+
+/* OrdDel.js */
+.basketButton {
+  float: right;
+  margin: 5px;
+  width: 70px;
+  height: 50px;
+  padding: 3px 3px 3px 3px;
+  border: 2px solid #6255f6;
+  border-radius: 15px;
+  background-color: #fff;
+  text-align: center;
+  text-decoration: none;
+  color: #6255f6;
+}
+
+.basketButton:hover {
+  background-color: #6255f6;
+  color: #74e88b;
+}
+
+@media (max-width: 430px) {
+  
+}
+

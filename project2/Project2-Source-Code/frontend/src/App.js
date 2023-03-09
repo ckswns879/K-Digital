@@ -1,15 +1,17 @@
 import './App.css';
-import axios from "axios";
 import { Route, Routes } from 'react-router-dom';
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { getSelectListRD } from "./Component/Store/Store"
+import { getList } from './API/funcAPI';
 import AuthLayout from './Page/AuthLayout';
 import AdminLayout from './Page/AdminLayout';
+import Home from './Page/Home/Home';
 import View1Main from './Page/View1/View1Main';
 import View2Main from './Page/View2/View2Main';
 import View3Main from './Page/View3/View3Main';
 import Login from './Page/View4/Login';
+import SignIn from './Page/View4/SignIn';
 import Admin from './Page/View5/Admin';
 import NavBar from './Component/NavBar/NavBar'
 
@@ -24,14 +26,13 @@ function App() {
 
   //어플이 시작되면 통신해서 선택용 리스트 호출
   useEffect(() => {
-    (async () =>
-      await axios
-        .get("http://localhost:8080/data/get")
-        .then((result) => {
-          dispatch(getSelectListRD(result.data));
-        })
-        .catch(() => console.log("데이터가져오기 실패")))();
+    (async () => {
+      await getList()
+        .then((res) => dispatch(getSelectListRD(res)))
+        .catch(() => console.log("데이터가져오기 실패"))
+    })();
   }, []);
+
 
   return (
     <>
@@ -40,7 +41,9 @@ function App() {
       
       <Routes>        
         <Route>
-          <Route path='/' element={<Login />} />
+          <Route path='/' element={<Home />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/signin' element={<SignIn />} />
         </Route>
         <Route element={<AdminLayout/>}>
           <Route path='/admin' element={<Admin />} />

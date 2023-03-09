@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes FadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@keyframes sc1 {
+  0% {transform:translate(0) scale(1);transform-origin:top center;opacity: 0%;}
+  100% {transform:translate(220px, -130px) scale(0.8);transform-origin:top center;opacity: 80%;}
+}
+
+@keyframes sc2 {
+  0% {transform:translate(0) scale(1);transform-origin:top center;opacity: 0%;}
+  100% {transform:translate(260px, 280px) scale(0.7);transform-origin:top center;opacity: 90%;}
+}
+
+@keyframes sc3 {
+  0% {transform:translate(0) scale(1);transform-origin:top center;opacity: 0%;}
+  100% {transform:translate(-300px, 270px) scale(0.6);transform-origin:top center;opacity: 90%;}
+}

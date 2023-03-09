@@ -22,9 +22,9 @@ public class ItemDto {
 		private String part1;
 		private String part2;	//??
 		private String key2;
-		private String leadtime;
+		private int leadtime;
 		private String client;	//발주처
-		private String esti_unit_price;	//견적단가
+		private int esti_unit_price;	//견적단가
 		private String currency;	//견적화폐
 		
 		public ItemInfo toEntity() {

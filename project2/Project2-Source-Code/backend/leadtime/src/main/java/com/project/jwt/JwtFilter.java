@@ -31,6 +31,9 @@ public class JwtFilter extends OncePerRequestFilter {
 
         // 2. validateToken 으로 토큰 유효성 검사
         // 정상 토큰이면 해당 토큰으로 Authentication 을 가져와서 SecurityContext 에 저장
+        // 가입/로그인/재발급(AuthController)을 제외한 모든 Request 요청은 이 필터를 거쳐감
+        // 대신 직접 DB 를 조회한 것이 아니라 Access Token 에 있는 Member ID 를 꺼낸 것
+        // 		(탈퇴로 인해 Member ID 가 DB 에 없는 경우 등 예외 상황은 Service 단에서 고려-- 현재 고려되지 않은듯.)
         if (StringUtils.hasText(jwt) && tokenProvider.validateToken(jwt)) {
             Authentication authentication = tokenProvider.getAuthentication(jwt);
             SecurityContextHolder.getContext().setAuthentication(authentication);

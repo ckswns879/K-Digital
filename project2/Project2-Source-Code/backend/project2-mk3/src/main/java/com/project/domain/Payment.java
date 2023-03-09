@@ -1,5 +1,6 @@
 package com.project.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,9 +21,9 @@ import lombok.Setter;
 public class Payment {
 	
 	@Id@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="payment_id")
 	private Long id;
 	private String item;		//청구품목
-	private String invoice;		//청구서번호
 	private int leadtime;		//리드타임
 	private String clients;		//발주처
 	private int order_qty;		//발주수량

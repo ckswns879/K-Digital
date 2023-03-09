@@ -1,0 +1,84 @@
+.admin {
+  background-color: #6255f6 ;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.categorization {
+  height: max-content;
+  width: 500px;
+  background-color: #fff;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 10vh 3vh;
+  margin: 10vh;
+}
+
+
+.input1 {
+  background-color: #f5f5fa;
+  padding: 20px;
+  border-radius: 35px;
+  margin: 10px;
+  color: #6255f6;
+}
+
+.adminForm input {
+  border: none;
+  background-color: #f5f5fa;
+  height: 30px;
+  margin-left: 5px;
+}
+
+.adminForm input:autofill {
+  background-color: #f5f5fa;
+}
+
+.adminForm input:focus {
+  border: none;
+  background-color: #f5f5fa;
+}
+
+.adminButton {
+  margin: 5px;
+  width: 100px;
+  height: 50px;
+  padding: 3px 3px 3px 3px;
+  border: 2px solid #6255f6;
+  border-radius: 15px;
+  background-color: #fff;
+  color: #6255f6;
+}
+
+.adminButton:hover {
+  background-color: #6255f6;
+  color: #74e88b;
+}
+
+.adminButtons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.data {
+  text-align: center;
+}
+
+.inData {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+  padding: 3px;
+}
+
+.pred {
+  color: #FF4E4D;
+}

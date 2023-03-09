@@ -44,7 +44,7 @@ public class DataServiceImpl implements DataService{
 		if (search[0].equals("부품대분류")) return itemsRepo.findByMachineryContaining(search[1]);
 		else if (search[0].equals("부품명")) return itemsRepo.findByItemsContaining(search[1]);
 		else if (search[0].equals("부품번호")) return itemsRepo.findByPart1Containing(search[1]);
-		else return itemsRepo.findByClientContaining(search[1]);		
+		else return itemsRepo.findByClientsContaining(search[1]);		
 	}
 	//String끼리 비교는 equals 제발 기억하자
 	
@@ -90,7 +90,10 @@ public class DataServiceImpl implements DataService{
         payment.setClients(basket.getClients());
         payment.setOrder_qty(basket.getBilling_amount());
         payment.setOrder_price(basket.getEsti_unit_price() * basket.getBilling_amount());
-        return paymentRepo.save(payment);
+        payment = paymentRepo.save(payment);
+        basketRepo.delete(basket);
+        return payment;
+        
     }
 		
 }

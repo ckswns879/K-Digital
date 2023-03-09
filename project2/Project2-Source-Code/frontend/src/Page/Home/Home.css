@@ -1,0 +1,136 @@
+@font-face {
+  font-family: 'LeferiPoint-WhiteObliqueA';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LeferiPoint-BlackA';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-BlackA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.home {
+  padding: 100px 100px 0 100px ;
+  height: screen;
+  font-family: 'LeferiPoint-WhiteObliqueA';
+}
+
+.bglg {
+  display: flex;
+  justify-content: center;
+}
+
+.circle {
+  background-color: #f5f5fa;
+  width: 70vw;
+  height: 70vh;
+  border-top-left-radius: 70vh;
+  border-top-right-radius: 70vh;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+}
+
+.sc1 {
+  background-color: #f5f5fa;
+  width: 5vw;
+  height: 5vw;
+  border-radius: 5vw;
+  position: fixed;
+  top: 20vh;
+  z-index: 1;
+}
+
+.sc2 {
+  background-color: #f5f5fa;
+  width: 3vw;
+  height: 3vw;
+  border-radius: 3vw;
+  position: fixed;
+  top: 30vh;
+  right: 10vw;
+  z-index: 1;
+}
+
+.sc3 {
+  background-color: #f5f5fa;
+  width: 4vw;
+  height: 4vw;
+  border-radius: 3vw;
+  position: fixed;
+  top: 25vh;
+  right: 15vw;
+  z-index: 1;
+}
+
+.monitor, .scimg, .scimg1, .scimg2, .scimg3 {
+  top: 15vh;
+  left: 6vw;
+  position: fixed;
+  z-index: 2;
+}
+
+.scimg {animation:FadeIn 2s ease 1 both;}
+
+.scimg1 {
+  animation:sc1 1s ease 1 normal both;
+  z-index: 3;
+}
+
+.scimg3 {
+  animation:sc2 1s ease 1 normal both;
+  z-index: 3;
+}
+
+.scimg2 {
+  animation:sc3 1s ease 1 normal both;
+  z-index: 3;
+}
+
+.home .loginButton {
+  border-radius: 5vh;
+  border: 3px solid #6255f6;
+  background-color: #6255f6;
+  color: #fff;
+  font-size: large;
+  font-weight: bold;
+  margin: 10px 1vw;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  height: 8vh;
+  width: 20vw;
+}
+
+.home .loginButton:hover {
+  background-color: #74e88b;
+  border: 3px solid #6255f6;
+  color: #FFF;
+}
+
+.info {
+  position: fixed;
+  z-index: 2;
+  top: 33vh;
+  right: 10vw;
+  color: #6255f6;
+}
+
+.infodiv {
+  text-align: center;
+}
+
+.infoh1 {
+  font-size: 70px;
+  text-align: center;  text-decoration: underline #74e88b 6px;
+  margin: 0 0 50px 0;
+  font-family: 'LeferiPoint-BlackA';
+}
+
+.infoh2 {
+  margin-bottom: 0;
+  font-size: 35px;
+}

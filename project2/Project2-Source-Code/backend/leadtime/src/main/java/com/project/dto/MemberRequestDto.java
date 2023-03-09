@@ -14,6 +14,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class MemberRequestDto {
+	//회원가입, 로그인을 위한 dto
 
     private String email;
     private String password;
@@ -22,7 +23,7 @@ public class MemberRequestDto {
         return Member.builder()
                 .email(email)
                 .password(passwordEncoder.encode(password))
-                .authority(Authority.ROLE_USER)
+                .authority(Authority.ROLE_ADMIN)	//.authority(auth)
                 .build();
     }
 

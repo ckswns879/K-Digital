@@ -16,9 +16,10 @@ function Graph({ props }) {
 
   return (
     <>
-      <div style={{ width: "800px", height: "500px", margin: "0 auto" }}>
+      <div className='graph' style={{ width: "800px", height: "500px", margin: "0 auto" }}>
         <ResponsiveLine
           data={data}
+          colors='#74e88b'
           margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
           xScale={{ type: 'point' }}
           yScale={{

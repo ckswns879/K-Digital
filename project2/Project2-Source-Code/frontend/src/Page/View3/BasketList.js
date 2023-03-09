@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { getBasketListRD } from "../../Component/Store/Store";
 
@@ -10,10 +10,14 @@ function BasketList() {
   const [category, setCategory] = useState();
   const [checkItems, setCheckItems] = useState([]);
 
+  const fixPrice = useCallback(price => {
+    return parseInt(price.toFixed(0)).toLocaleString();
+  }, []);
+
   //main에서 통신 호출된 장바구니를 state에 담기
   useEffect(() => {
     setData(Basket);
-    setCategory(Basket.map((item) => item.key2));
+    setCategory(Basket.map((item) => item.items.category));
   }, [Basket])
 
   useEffect(() => {
@@ -55,39 +59,47 @@ function BasketList() {
     ))
   }
 
+  const sortByName = () => {
+    //카테고리별로 분류
+    setData([...data].sort((a, b) => a.items.machinery.localeCompare(b.items.machinery)));
+  };
+
   return (
     <>
+      <h2 className="cart">장바구니</h2>      
       <div className="OrderList">
         {key2.map((kitem, index) =>
           <div className="byCategory" key={index}>
-            <table>
+            <div className="categoryName"> {kitem} </div>
+            <table className="orderTable">
               <thead>
                 <tr>
                   <th></th>
-                  <th>카테고리</th>
-                  <th>Machinery</th>
-                  <th>청구품목</th>
-                  <th>Part.No</th>
-                  <th>발주처</th>
-                  <th>리드타임(일)</th>
-                  <th>견적화폐</th>
-                  <th>견적단가</th>
+                  <th className="th2">카테고리</th>
+                  <th className="th2" onClick={sortByName}>Machinery</th>
+                  <th className="th2">청구품목</th>
+                  <th className="th2">Part.No</th>
+                  <th className="th2">발주처</th>
+                  <th className="th2">리드타임(일)</th>
+                  <th className="th2">견적화폐</th>
+                  <th className="th2">견적단가</th>
                 </tr>
               </thead>
               <tbody>
-                {data.filter((item) => kitem.includes(item.key2))
+                {data.filter((item) => kitem.includes(item.items.category))
                   .map((item, index) => (
                     <tr key={index}>
+                      {/* 똑같은 항목이 여러개 들어가면 전부 다 체크되는 상황 */}
                       <td><input type={'checkbox'} onChange={(e) => handleSingleCheck(e.target.checked, item.id)}
                         checked={checkItems.includes(item.id) ? true : false}></input></td>
-                      <td>{item.key2}</td>
-                      <td>{item.machinery}</td>
-                      <td>{item.items}</td>
-                      <td>{item.part1}</td>
-                      <td>{item.baljucheo}</td>
-                      <td>{item.leadtime}</td>
-                      <td>{item.gyeonjeokhwapye}</td>
-                      <td>{item.gyeonjeokdanga}</td>
+                      <td>{item.items.category}</td>
+                      <td>{item.items.machinery}</td>
+                      <td>{item.items.items}</td>
+                      <td>{item.items.part1}</td>
+                      <td>{item.items.clients}</td>
+                      <td>{item.items.leadtime}</td>
+                      <td>{item.items.currency}</td>
+                      <td>{fixPrice(parseInt(item.items.esti_unit_price))}</td>
                     </tr>
                   ))
                 }
@@ -95,9 +107,9 @@ function BasketList() {
             </table>
             <div className="leadtimeByCategory">
               {/* 각 카테고리별 리드타임중 큰값 출력 */}
-              {kitem}
-              총 {(data.filter((item) => kitem.includes(item.key2))).length}개
-              소요 예상일: {Math.max(...data.filter((item) => kitem.includes(item.key2)).map((i) => i.leadtime))}(일)
+              {/* {kitem} */}
+              <div> 총 {(data.filter((item) => kitem.includes(item.items.category))).length}개</div>
+              <div>소요 예상일: {Math.max(...data.filter((item) => kitem.includes(item.items.category)).map((i) => i.items.leadtime))}(일)</div>
             </div>
           </div>
         )}

@@ -1,4 +1,4 @@
-!SESSION 2023-02-23 09:32:56.223 -----------------------------------------------
+!SESSION 2023-02-28 16:54:35.500 -----------------------------------------------
 eclipse.buildId=4.16.1.202210240748
 java.version=17.0.4.1
 java.vendor=Eclipse Adoptium
@@ -6,1055 +6,9 @@ BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
 Framework arguments:  -product org.springframework.boot.ide.branding.sts4
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
 
-This is a continuation of log file C:\Users\user\Desktop\PNUProject2\backend\.metadata\.bak_0.log
-Created Time: 2023-02-23 09:33:36.809
-
-!ENTRY org.eclipse.lsp4e 4 0 2023-02-23 09:33:36.809
-!MESSAGE Exception occurred while fetching the content type from the buffer
-!STACK 1
-org.eclipse.core.internal.resources.ResourceException(/leadtime/src/main/java/com/project/controller/DataController.java)[368]: java.lang.Exception: Resource '/leadtime/src/main/java/com/project/controller/DataController.java' does not exist.
-	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
-	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
-	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
-	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
-	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:255)
-	at org.eclipse.core.internal.filebuffers.ResourceTextFileBuffer.getContentType(ResourceTextFileBuffer.java:201)
-	at org.eclipse.lsp4e.LSPEclipseUtils.getDocumentContentTypes(LSPEclipseUtils.java:929)
-	at org.eclipse.lsp4e.LanguageServiceAccessor.getLSWrappers(LanguageServiceAccessor.java:355)
-	at org.eclipse.lsp4e.LanguageServiceAccessor.getLanguageServers(LanguageServiceAccessor.java:610)
-	at org.eclipse.lsp4e.operations.rename.LSPRenameHandler.setEnabled(LSPRenameHandler.java:116)
-	at org.eclipse.ui.internal.handlers.HandlerProxy.setEnabled(HandlerProxy.java:229)
-	at org.eclipse.ui.internal.handlers.E4HandlerProxy.setEnabled(E4HandlerProxy.java:133)
-	at jdk.internal.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:317)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:251)
-	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
-	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.setEnabled(HandlerServiceHandler.java:84)
-	at org.eclipse.core.commands.Command.setEnabled(Command.java:856)
-	at org.eclipse.ui.menus.CommandContributionItem.isEnabled(CommandContributionItem.java:916)
-	at org.eclipse.ui.menus.CommandContributionItem.updateMenuItem(CommandContributionItem.java:531)
-	at org.eclipse.ui.menus.CommandContributionItem.update(CommandContributionItem.java:484)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:858)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:858)
-	at org.eclipse.ui.internal.Workbench.updateActiveWorkbenchWindowMenuManager(Workbench.java:3138)
-	at org.eclipse.ui.internal.Workbench.lambda$0(Workbench.java:3120)
-	at org.eclipse.jface.bindings.BindingManager.fireBindingManagerChanged(BindingManager.java:901)
-	at org.eclipse.jface.bindings.BindingManager.setActiveBindings(BindingManager.java:2181)
-	at org.eclipse.jface.bindings.BindingManager.recomputeBindings(BindingManager.java:1767)
-	at org.eclipse.jface.bindings.BindingManager.contextManagerChanged(BindingManager.java:691)
-	at org.eclipse.core.commands.contexts.ContextManager.fireContextManagerChanged(ContextManager.java:164)
-	at org.eclipse.core.commands.contexts.ContextManager.setEventCaching(ContextManager.java:323)
-	at org.eclipse.core.commands.contexts.ContextManager.deferUpdates(ContextManager.java:85)
-	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:778)
-	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:680)
-	at org.eclipse.e4.ui.internal.workbench.swt.AbstractPartRenderer.activate(AbstractPartRenderer.java:97)
-	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.lambda$0(ContributedPartRenderer.java:63)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4251)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
-	at org.eclipse.swt.widgets.Shell.setActiveControl(Shell.java:1530)
-	at org.eclipse.swt.widgets.Shell.WM_MOUSEACTIVATE(Shell.java:2460)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4789)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
-	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1478)
-	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2284)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.PeekMessage(Native Method)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3640)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
-!SUBENTRY 1 org.eclipse.core.resources 4 368 2023-02-23 09:33:36.809
-!MESSAGE Resource '/leadtime/src/main/java/com/project/controller/DataController.java' does not exist.
-!STACK 0
-java.lang.Exception: Resource '/leadtime/src/main/java/com/project/controller/DataController.java' does not exist.
-	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
-	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
-	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
-	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
-	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:255)
-	at org.eclipse.core.internal.filebuffers.ResourceTextFileBuffer.getContentType(ResourceTextFileBuffer.java:201)
-	at org.eclipse.lsp4e.LSPEclipseUtils.getDocumentContentTypes(LSPEclipseUtils.java:929)
-	at org.eclipse.lsp4e.LanguageServiceAccessor.getLSWrappers(LanguageServiceAccessor.java:355)
-	at org.eclipse.lsp4e.LanguageServiceAccessor.getLanguageServers(LanguageServiceAccessor.java:610)
-	at org.eclipse.lsp4e.operations.rename.LSPRenameHandler.setEnabled(LSPRenameHandler.java:116)
-	at org.eclipse.ui.internal.handlers.HandlerProxy.setEnabled(HandlerProxy.java:229)
-	at org.eclipse.ui.internal.handlers.E4HandlerProxy.setEnabled(E4HandlerProxy.java:133)
-	at jdk.internal.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:317)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:251)
-	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
-	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.setEnabled(HandlerServiceHandler.java:84)
-	at org.eclipse.core.commands.Command.setEnabled(Command.java:856)
-	at org.eclipse.ui.menus.CommandContributionItem.isEnabled(CommandContributionItem.java:916)
-	at org.eclipse.ui.menus.CommandContributionItem.updateMenuItem(CommandContributionItem.java:531)
-	at org.eclipse.ui.menus.CommandContributionItem.update(CommandContributionItem.java:484)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:858)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:858)
-	at org.eclipse.ui.internal.Workbench.updateActiveWorkbenchWindowMenuManager(Workbench.java:3138)
-	at org.eclipse.ui.internal.Workbench.lambda$0(Workbench.java:3120)
-	at org.eclipse.jface.bindings.BindingManager.fireBindingManagerChanged(BindingManager.java:901)
-	at org.eclipse.jface.bindings.BindingManager.setActiveBindings(BindingManager.java:2181)
-	at org.eclipse.jface.bindings.BindingManager.recomputeBindings(BindingManager.java:1767)
-	at org.eclipse.jface.bindings.BindingManager.contextManagerChanged(BindingManager.java:691)
-	at org.eclipse.core.commands.contexts.ContextManager.fireContextManagerChanged(ContextManager.java:164)
-	at org.eclipse.core.commands.contexts.ContextManager.setEventCaching(ContextManager.java:323)
-	at org.eclipse.core.commands.contexts.ContextManager.deferUpdates(ContextManager.java:85)
-	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:778)
-	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:680)
-	at org.eclipse.e4.ui.internal.workbench.swt.AbstractPartRenderer.activate(AbstractPartRenderer.java:97)
-	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.lambda$0(ContributedPartRenderer.java:63)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4251)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
-	at org.eclipse.swt.widgets.Shell.setActiveControl(Shell.java:1530)
-	at org.eclipse.swt.widgets.Shell.WM_MOUSEACTIVATE(Shell.java:2460)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4789)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
-	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1478)
-	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2284)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.PeekMessage(Native Method)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3640)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
-
-!ENTRY org.eclipse.lsp4e 4 0 2023-02-23 09:33:36.811
-!MESSAGE Exception occurred while fetching the content type from the buffer
-!STACK 1
-org.eclipse.core.internal.resources.ResourceException(/leadtime/src/main/java/com/project/controller/DataController.java)[368]: java.lang.Exception: Resource '/leadtime/src/main/java/com/project/controller/DataController.java' does not exist.
-	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
-	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
-	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
-	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
-	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:255)
-	at org.eclipse.core.internal.filebuffers.ResourceTextFileBuffer.getContentType(ResourceTextFileBuffer.java:201)
-	at org.eclipse.lsp4e.LSPEclipseUtils.getDocumentContentTypes(LSPEclipseUtils.java:929)
-	at org.eclipse.lsp4e.LanguageServiceAccessor.getLSWrappers(LanguageServiceAccessor.java:355)
-	at org.eclipse.lsp4e.LanguageServiceAccessor.getLanguageServers(LanguageServiceAccessor.java:610)
-	at org.eclipse.lsp4e.operations.rename.LSPRenameHandler.setEnabled(LSPRenameHandler.java:116)
-	at org.eclipse.ui.internal.handlers.HandlerProxy.setEnabled(HandlerProxy.java:229)
-	at org.eclipse.ui.internal.handlers.E4HandlerProxy.canExecute(E4HandlerProxy.java:76)
-	at jdk.internal.reflect.GeneratedMethodAccessor10.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:317)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:251)
-	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
-	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.isEnabled(HandlerServiceHandler.java:62)
-	at org.eclipse.core.commands.Command.isEnabled(Command.java:832)
-	at org.eclipse.ui.menus.CommandContributionItem.isEnabled(CommandContributionItem.java:917)
-	at org.eclipse.ui.menus.CommandContributionItem.updateMenuItem(CommandContributionItem.java:531)
-	at org.eclipse.ui.menus.CommandContributionItem.update(CommandContributionItem.java:484)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:858)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:858)
-	at org.eclipse.ui.internal.Workbench.updateActiveWorkbenchWindowMenuManager(Workbench.java:3138)
-	at org.eclipse.ui.internal.Workbench.lambda$0(Workbench.java:3120)
-	at org.eclipse.jface.bindings.BindingManager.fireBindingManagerChanged(BindingManager.java:901)
-	at org.eclipse.jface.bindings.BindingManager.setActiveBindings(BindingManager.java:2181)
-	at org.eclipse.jface.bindings.BindingManager.recomputeBindings(BindingManager.java:1767)
-	at org.eclipse.jface.bindings.BindingManager.contextManagerChanged(BindingManager.java:691)
-	at org.eclipse.core.commands.contexts.ContextManager.fireContextManagerChanged(ContextManager.java:164)
-	at org.eclipse.core.commands.contexts.ContextManager.setEventCaching(ContextManager.java:323)
-	at org.eclipse.core.commands.contexts.ContextManager.deferUpdates(ContextManager.java:85)
-	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:778)
-	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:680)
-	at org.eclipse.e4.ui.internal.workbench.swt.AbstractPartRenderer.activate(AbstractPartRenderer.java:97)
-	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.lambda$0(ContributedPartRenderer.java:63)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4251)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
-	at org.eclipse.swt.widgets.Shell.setActiveControl(Shell.java:1530)
-	at org.eclipse.swt.widgets.Shell.WM_MOUSEACTIVATE(Shell.java:2460)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4789)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
-	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1478)
-	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2284)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.PeekMessage(Native Method)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3640)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
-!SUBENTRY 1 org.eclipse.core.resources 4 368 2023-02-23 09:33:36.811
-!MESSAGE Resource '/leadtime/src/main/java/com/project/controller/DataController.java' does not exist.
-!STACK 0
-java.lang.Exception: Resource '/leadtime/src/main/java/com/project/controller/DataController.java' does not exist.
-	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
-	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
-	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
-	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
-	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:255)
-	at org.eclipse.core.internal.filebuffers.ResourceTextFileBuffer.getContentType(ResourceTextFileBuffer.java:201)
-	at org.eclipse.lsp4e.LSPEclipseUtils.getDocumentContentTypes(LSPEclipseUtils.java:929)
-	at org.eclipse.lsp4e.LanguageServiceAccessor.getLSWrappers(LanguageServiceAccessor.java:355)
-	at org.eclipse.lsp4e.LanguageServiceAccessor.getLanguageServers(LanguageServiceAccessor.java:610)
-	at org.eclipse.lsp4e.operations.rename.LSPRenameHandler.setEnabled(LSPRenameHandler.java:116)
-	at org.eclipse.ui.internal.handlers.HandlerProxy.setEnabled(HandlerProxy.java:229)
-	at org.eclipse.ui.internal.handlers.E4HandlerProxy.canExecute(E4HandlerProxy.java:76)
-	at jdk.internal.reflect.GeneratedMethodAccessor10.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:317)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:251)
-	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
-	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.isEnabled(HandlerServiceHandler.java:62)
-	at org.eclipse.core.commands.Command.isEnabled(Command.java:832)
-	at org.eclipse.ui.menus.CommandContributionItem.isEnabled(CommandContributionItem.java:917)
-	at org.eclipse.ui.menus.CommandContributionItem.updateMenuItem(CommandContributionItem.java:531)
-	at org.eclipse.ui.menus.CommandContributionItem.update(CommandContributionItem.java:484)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:858)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:858)
-	at org.eclipse.ui.internal.Workbench.updateActiveWorkbenchWindowMenuManager(Workbench.java:3138)
-	at org.eclipse.ui.internal.Workbench.lambda$0(Workbench.java:3120)
-	at org.eclipse.jface.bindings.BindingManager.fireBindingManagerChanged(BindingManager.java:901)
-	at org.eclipse.jface.bindings.BindingManager.setActiveBindings(BindingManager.java:2181)
-	at org.eclipse.jface.bindings.BindingManager.recomputeBindings(BindingManager.java:1767)
-	at org.eclipse.jface.bindings.BindingManager.contextManagerChanged(BindingManager.java:691)
-	at org.eclipse.core.commands.contexts.ContextManager.fireContextManagerChanged(ContextManager.java:164)
-	at org.eclipse.core.commands.contexts.ContextManager.setEventCaching(ContextManager.java:323)
-	at org.eclipse.core.commands.contexts.ContextManager.deferUpdates(ContextManager.java:85)
-	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:778)
-	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:680)
-	at org.eclipse.e4.ui.internal.workbench.swt.AbstractPartRenderer.activate(AbstractPartRenderer.java:97)
-	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.lambda$0(ContributedPartRenderer.java:63)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4251)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
-	at org.eclipse.swt.widgets.Shell.setActiveControl(Shell.java:1530)
-	at org.eclipse.swt.widgets.Shell.WM_MOUSEACTIVATE(Shell.java:2460)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4789)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
-	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1478)
-	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2284)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.PeekMessage(Native Method)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3640)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
-
-!ENTRY org.eclipse.lsp4e 4 0 2023-02-23 09:33:36.814
-!MESSAGE Exception occurred while fetching the content type from the buffer
-!STACK 1
-org.eclipse.core.internal.resources.ResourceException(/leadtime/src/main/java/com/project/controller/DataController.java)[368]: java.lang.Exception: Resource '/leadtime/src/main/java/com/project/controller/DataController.java' does not exist.
-	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
-	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
-	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
-	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
-	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:255)
-	at org.eclipse.core.internal.filebuffers.ResourceTextFileBuffer.getContentType(ResourceTextFileBuffer.java:201)
-	at org.eclipse.lsp4e.LSPEclipseUtils.getDocumentContentTypes(LSPEclipseUtils.java:929)
-	at org.eclipse.lsp4e.LanguageServiceAccessor.getLSWrappers(LanguageServiceAccessor.java:355)
-	at org.eclipse.lsp4e.LanguageServiceAccessor.getLanguageServers(LanguageServiceAccessor.java:610)
-	at org.eclipse.lsp4e.operations.rename.LSPRenameHandler.setEnabled(LSPRenameHandler.java:116)
-	at org.eclipse.ui.internal.handlers.HandlerProxy.setEnabled(HandlerProxy.java:229)
-	at org.eclipse.ui.internal.handlers.E4HandlerProxy.setEnabled(E4HandlerProxy.java:133)
-	at jdk.internal.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:317)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:251)
-	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
-	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.setEnabled(HandlerServiceHandler.java:84)
-	at org.eclipse.core.commands.Command.setEnabled(Command.java:856)
-	at org.eclipse.ui.menus.CommandContributionItem.isEnabled(CommandContributionItem.java:916)
-	at org.eclipse.ui.menus.CommandContributionItem.updateMenuItem(CommandContributionItem.java:531)
-	at org.eclipse.ui.menus.CommandContributionItem.update(CommandContributionItem.java:484)
-	at org.eclipse.ui.menus.CommandContributionItem.update(CommandContributionItem.java:477)
-	at org.eclipse.ui.menus.CommandContributionItem.lambda$0(CommandContributionItem.java:935)
-	at org.eclipse.jface.bindings.BindingManager.fireBindingManagerChanged(BindingManager.java:901)
-	at org.eclipse.jface.bindings.BindingManager.setActiveBindings(BindingManager.java:2181)
-	at org.eclipse.jface.bindings.BindingManager.recomputeBindings(BindingManager.java:1767)
-	at org.eclipse.jface.bindings.BindingManager.contextManagerChanged(BindingManager.java:691)
-	at org.eclipse.core.commands.contexts.ContextManager.fireContextManagerChanged(ContextManager.java:164)
-	at org.eclipse.core.commands.contexts.ContextManager.setEventCaching(ContextManager.java:323)
-	at org.eclipse.core.commands.contexts.ContextManager.deferUpdates(ContextManager.java:85)
-	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:778)
-	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:680)
-	at org.eclipse.e4.ui.internal.workbench.swt.AbstractPartRenderer.activate(AbstractPartRenderer.java:97)
-	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.lambda$0(ContributedPartRenderer.java:63)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4251)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
-	at org.eclipse.swt.widgets.Shell.setActiveControl(Shell.java:1530)
-	at org.eclipse.swt.widgets.Shell.WM_MOUSEACTIVATE(Shell.java:2460)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4789)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
-	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1478)
-	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2284)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.PeekMessage(Native Method)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3640)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
-!SUBENTRY 1 org.eclipse.core.resources 4 368 2023-02-23 09:33:36.815
-!MESSAGE Resource '/leadtime/src/main/java/com/project/controller/DataController.java' does not exist.
-!STACK 0
-java.lang.Exception: Resource '/leadtime/src/main/java/com/project/controller/DataController.java' does not exist.
-	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
-	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
-	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
-	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
-	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:255)
-	at org.eclipse.core.internal.filebuffers.ResourceTextFileBuffer.getContentType(ResourceTextFileBuffer.java:201)
-	at org.eclipse.lsp4e.LSPEclipseUtils.getDocumentContentTypes(LSPEclipseUtils.java:929)
-	at org.eclipse.lsp4e.LanguageServiceAccessor.getLSWrappers(LanguageServiceAccessor.java:355)
-	at org.eclipse.lsp4e.LanguageServiceAccessor.getLanguageServers(LanguageServiceAccessor.java:610)
-	at org.eclipse.lsp4e.operations.rename.LSPRenameHandler.setEnabled(LSPRenameHandler.java:116)
-	at org.eclipse.ui.internal.handlers.HandlerProxy.setEnabled(HandlerProxy.java:229)
-	at org.eclipse.ui.internal.handlers.E4HandlerProxy.setEnabled(E4HandlerProxy.java:133)
-	at jdk.internal.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:317)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:251)
-	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
-	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.setEnabled(HandlerServiceHandler.java:84)
-	at org.eclipse.core.commands.Command.setEnabled(Command.java:856)
-	at org.eclipse.ui.menus.CommandContributionItem.isEnabled(CommandContributionItem.java:916)
-	at org.eclipse.ui.menus.CommandContributionItem.updateMenuItem(CommandContributionItem.java:531)
-	at org.eclipse.ui.menus.CommandContributionItem.update(CommandContributionItem.java:484)
-	at org.eclipse.ui.menus.CommandContributionItem.update(CommandContributionItem.java:477)
-	at org.eclipse.ui.menus.CommandContributionItem.lambda$0(CommandContributionItem.java:935)
-	at org.eclipse.jface.bindings.BindingManager.fireBindingManagerChanged(BindingManager.java:901)
-	at org.eclipse.jface.bindings.BindingManager.setActiveBindings(BindingManager.java:2181)
-	at org.eclipse.jface.bindings.BindingManager.recomputeBindings(BindingManager.java:1767)
-	at org.eclipse.jface.bindings.BindingManager.contextManagerChanged(BindingManager.java:691)
-	at org.eclipse.core.commands.contexts.ContextManager.fireContextManagerChanged(ContextManager.java:164)
-	at org.eclipse.core.commands.contexts.ContextManager.setEventCaching(ContextManager.java:323)
-	at org.eclipse.core.commands.contexts.ContextManager.deferUpdates(ContextManager.java:85)
-	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:778)
-	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:680)
-	at org.eclipse.e4.ui.internal.workbench.swt.AbstractPartRenderer.activate(AbstractPartRenderer.java:97)
-	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.lambda$0(ContributedPartRenderer.java:63)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4251)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
-	at org.eclipse.swt.widgets.Shell.setActiveControl(Shell.java:1530)
-	at org.eclipse.swt.widgets.Shell.WM_MOUSEACTIVATE(Shell.java:2460)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4789)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
-	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1478)
-	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2284)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.PeekMessage(Native Method)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3640)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
-
-!ENTRY org.eclipse.lsp4e 4 0 2023-02-23 09:33:36.816
-!MESSAGE Exception occurred while fetching the content type from the buffer
-!STACK 1
-org.eclipse.core.internal.resources.ResourceException(/leadtime/src/main/java/com/project/controller/DataController.java)[368]: java.lang.Exception: Resource '/leadtime/src/main/java/com/project/controller/DataController.java' does not exist.
-	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
-	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
-	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
-	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
-	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:255)
-	at org.eclipse.core.internal.filebuffers.ResourceTextFileBuffer.getContentType(ResourceTextFileBuffer.java:201)
-	at org.eclipse.lsp4e.LSPEclipseUtils.getDocumentContentTypes(LSPEclipseUtils.java:929)
-	at org.eclipse.lsp4e.LanguageServiceAccessor.getLSWrappers(LanguageServiceAccessor.java:355)
-	at org.eclipse.lsp4e.LanguageServiceAccessor.getLanguageServers(LanguageServiceAccessor.java:610)
-	at org.eclipse.lsp4e.operations.rename.LSPRenameHandler.setEnabled(LSPRenameHandler.java:116)
-	at org.eclipse.ui.internal.handlers.HandlerProxy.setEnabled(HandlerProxy.java:229)
-	at org.eclipse.ui.internal.handlers.E4HandlerProxy.canExecute(E4HandlerProxy.java:76)
-	at jdk.internal.reflect.GeneratedMethodAccessor10.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:317)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:251)
-	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
-	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.isEnabled(HandlerServiceHandler.java:62)
-	at org.eclipse.core.commands.Command.isEnabled(Command.java:832)
-	at org.eclipse.ui.menus.CommandContributionItem.isEnabled(CommandContributionItem.java:917)
-	at org.eclipse.ui.menus.CommandContributionItem.updateMenuItem(CommandContributionItem.java:531)
-	at org.eclipse.ui.menus.CommandContributionItem.update(CommandContributionItem.java:484)
-	at org.eclipse.ui.menus.CommandContributionItem.update(CommandContributionItem.java:477)
-	at org.eclipse.ui.menus.CommandContributionItem.lambda$0(CommandContributionItem.java:935)
-	at org.eclipse.jface.bindings.BindingManager.fireBindingManagerChanged(BindingManager.java:901)
-	at org.eclipse.jface.bindings.BindingManager.setActiveBindings(BindingManager.java:2181)
-	at org.eclipse.jface.bindings.BindingManager.recomputeBindings(BindingManager.java:1767)
-	at org.eclipse.jface.bindings.BindingManager.contextManagerChanged(BindingManager.java:691)
-	at org.eclipse.core.commands.contexts.ContextManager.fireContextManagerChanged(ContextManager.java:164)
-	at org.eclipse.core.commands.contexts.ContextManager.setEventCaching(ContextManager.java:323)
-	at org.eclipse.core.commands.contexts.ContextManager.deferUpdates(ContextManager.java:85)
-	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:778)
-	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:680)
-	at org.eclipse.e4.ui.internal.workbench.swt.AbstractPartRenderer.activate(AbstractPartRenderer.java:97)
-	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.lambda$0(ContributedPartRenderer.java:63)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4251)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
-	at org.eclipse.swt.widgets.Shell.setActiveControl(Shell.java:1530)
-	at org.eclipse.swt.widgets.Shell.WM_MOUSEACTIVATE(Shell.java:2460)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4789)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
-	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1478)
-	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2284)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.PeekMessage(Native Method)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3640)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
-!SUBENTRY 1 org.eclipse.core.resources 4 368 2023-02-23 09:33:36.816
-!MESSAGE Resource '/leadtime/src/main/java/com/project/controller/DataController.java' does not exist.
-!STACK 0
-java.lang.Exception: Resource '/leadtime/src/main/java/com/project/controller/DataController.java' does not exist.
-	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
-	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
-	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
-	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
-	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:255)
-	at org.eclipse.core.internal.filebuffers.ResourceTextFileBuffer.getContentType(ResourceTextFileBuffer.java:201)
-	at org.eclipse.lsp4e.LSPEclipseUtils.getDocumentContentTypes(LSPEclipseUtils.java:929)
-	at org.eclipse.lsp4e.LanguageServiceAccessor.getLSWrappers(LanguageServiceAccessor.java:355)
-	at org.eclipse.lsp4e.LanguageServiceAccessor.getLanguageServers(LanguageServiceAccessor.java:610)
-	at org.eclipse.lsp4e.operations.rename.LSPRenameHandler.setEnabled(LSPRenameHandler.java:116)
-	at org.eclipse.ui.internal.handlers.HandlerProxy.setEnabled(HandlerProxy.java:229)
-	at org.eclipse.ui.internal.handlers.E4HandlerProxy.canExecute(E4HandlerProxy.java:76)
-	at jdk.internal.reflect.GeneratedMethodAccessor10.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:317)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:251)
-	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
-	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.isEnabled(HandlerServiceHandler.java:62)
-	at org.eclipse.core.commands.Command.isEnabled(Command.java:832)
-	at org.eclipse.ui.menus.CommandContributionItem.isEnabled(CommandContributionItem.java:917)
-	at org.eclipse.ui.menus.CommandContributionItem.updateMenuItem(CommandContributionItem.java:531)
-	at org.eclipse.ui.menus.CommandContributionItem.update(CommandContributionItem.java:484)
-	at org.eclipse.ui.menus.CommandContributionItem.update(CommandContributionItem.java:477)
-	at org.eclipse.ui.menus.CommandContributionItem.lambda$0(CommandContributionItem.java:935)
-	at org.eclipse.jface.bindings.BindingManager.fireBindingManagerChanged(BindingManager.java:901)
-	at org.eclipse.jface.bindings.BindingManager.setActiveBindings(BindingManager.java:2181)
-	at org.eclipse.jface.bindings.BindingManager.recomputeBindings(BindingManager.java:1767)
-	at org.eclipse.jface.bindings.BindingManager.contextManagerChanged(BindingManager.java:691)
-	at org.eclipse.core.commands.contexts.ContextManager.fireContextManagerChanged(ContextManager.java:164)
-	at org.eclipse.core.commands.contexts.ContextManager.setEventCaching(ContextManager.java:323)
-	at org.eclipse.core.commands.contexts.ContextManager.deferUpdates(ContextManager.java:85)
-	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:778)
-	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:680)
-	at org.eclipse.e4.ui.internal.workbench.swt.AbstractPartRenderer.activate(AbstractPartRenderer.java:97)
-	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.lambda$0(ContributedPartRenderer.java:63)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4251)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
-	at org.eclipse.swt.widgets.Shell.setActiveControl(Shell.java:1530)
-	at org.eclipse.swt.widgets.Shell.WM_MOUSEACTIVATE(Shell.java:2460)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4789)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
-	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1478)
-	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2284)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
-	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4846)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
-	at org.eclipse.swt.internal.win32.OS.PeekMessage(Native Method)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3640)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
-!SESSION 2023-02-23 09:35:38.130 -----------------------------------------------
-eclipse.buildId=4.16.1.202210240748
-java.version=17.0.4.1
-java.vendor=Eclipse Adoptium
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
-Framework arguments:  -product org.springframework.boot.ide.branding.sts4
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
-
-!ENTRY org.eclipse.jface 2 0 2023-02-23 09:35:42.677
+!ENTRY org.eclipse.jface 2 0 2023-02-28 16:55:26.018
 !MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2023-02-23 09:35:42.677
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-02-28 16:55:26.018
 !MESSAGE A conflict occurred for CTRL+SHIFT+T:
 Binding(CTRL+SHIFT+T,
 	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
@@ -1072,7 +26,7 @@ Binding(CTRL+SHIFT+T,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2023-02-23 09:35:42.677
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-02-28 16:55:26.018
 !MESSAGE A conflict occurred for ALT+SHIFT+X R:
 Binding(ALT+SHIFT+X R,
 	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.run,Run on Server,
@@ -1090,7 +44,7 @@ Binding(ALT+SHIFT+X R,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2023-02-23 09:35:42.677
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-02-28 16:55:26.018
 !MESSAGE A conflict occurred for ALT+SHIFT+R:
 Binding(ALT+SHIFT+R,
 	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
@@ -1108,7 +62,7 @@ Binding(ALT+SHIFT+R,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2023-02-23 09:35:42.677
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-02-28 16:55:26.018
 !MESSAGE A conflict occurred for ALT+SHIFT+D R:
 Binding(ALT+SHIFT+D R,
 	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.debug,Debug on Server,
@@ -1127,13 +81,22 @@ Binding(ALT+SHIFT+D R,
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
 
-!ENTRY org.eclipse.egit.ui 2 0 2023-02-23 09:35:44.605
+!ENTRY org.eclipse.egit.ui 2 0 2023-02-28 16:55:30.720
 !MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
 user global configuration and to define the default location to store repositories: 'C:\Users\user'. If this is
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-!SESSION 2023-02-23 09:37:36.987 -----------------------------------------------
+
+!ENTRY org.eclipse.php.debug.core 4 4 2023-02-28 16:55:31.336
+!MESSAGE The debug port 9000 is in use. Please select a different port for the debugger.
+
+!ENTRY org.eclipse.php.debug.core 4 4 2023-02-28 16:55:31.337
+!MESSAGE Could not open a broadcast port on: 20080 (port might be in use). Please select a different port number
+
+!ENTRY org.eclipse.php.debug.core 4 4 2023-02-28 16:55:31.339
+!MESSAGE The debug port 10137 is in use. Please select a different port for the debugger.
+!SESSION 2023-03-02 09:23:19.071 -----------------------------------------------
 eclipse.buildId=4.16.1.202210240748
 java.version=17.0.4.1
 java.vendor=Eclipse Adoptium
@@ -1141,9 +104,9 @@ BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
 Framework arguments:  -product org.springframework.boot.ide.branding.sts4
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
 
-!ENTRY org.eclipse.jface 2 0 2023-02-23 09:37:54.344
+!ENTRY org.eclipse.jface 2 0 2023-03-02 09:23:53.371
 !MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2023-02-23 09:37:54.344
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-03-02 09:23:53.371
 !MESSAGE A conflict occurred for CTRL+SHIFT+T:
 Binding(CTRL+SHIFT+T,
 	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
@@ -1161,7 +124,7 @@ Binding(CTRL+SHIFT+T,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2023-02-23 09:37:54.344
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-03-02 09:23:53.371
 !MESSAGE A conflict occurred for ALT+SHIFT+X R:
 Binding(ALT+SHIFT+X R,
 	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.run,Run on Server,
@@ -1179,7 +142,7 @@ Binding(ALT+SHIFT+X R,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2023-02-23 09:37:54.344
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-03-02 09:23:53.371
 !MESSAGE A conflict occurred for ALT+SHIFT+R:
 Binding(ALT+SHIFT+R,
 	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
@@ -1197,7 +160,7 @@ Binding(ALT+SHIFT+R,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2023-02-23 09:37:54.344
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-03-02 09:23:53.371
 !MESSAGE A conflict occurred for ALT+SHIFT+D R:
 Binding(ALT+SHIFT+D R,
 	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.debug,Debug on Server,
@@ -1216,13 +179,13 @@ Binding(ALT+SHIFT+D R,
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
 
-!ENTRY org.eclipse.egit.ui 2 0 2023-02-23 09:37:56.271
+!ENTRY org.eclipse.egit.ui 2 0 2023-03-02 09:23:56.194
 !MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
 user global configuration and to define the default location to store repositories: 'C:\Users\user'. If this is
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-!SESSION 2023-02-23 23:16:32.585 -----------------------------------------------
+!SESSION 2023-03-02 09:53:49.971 -----------------------------------------------
 eclipse.buildId=4.16.1.202210240748
 java.version=17.0.4.1
 java.vendor=Eclipse Adoptium
@@ -1230,9 +193,276 @@ BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
 Framework arguments:  -product org.springframework.boot.ide.branding.sts4
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
 
-!ENTRY org.eclipse.core.resources 4 567 2023-02-23 23:16:35.873
+!ENTRY org.eclipse.jface 2 0 2023-03-02 09:54:29.240
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-03-02 09:54:29.240
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-03-02 09:54:29.240
+!MESSAGE A conflict occurred for ALT+SHIFT+X R:
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.run,Run on Server,
+		Run the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.wst.server.launchShortcut.run"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.run,Run RAP Application,
+		Run RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.rap.tools.launch.RAPLaunchShortcut.run"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-03-02 09:54:29.240
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-03-02 09:54:29.240
+!MESSAGE A conflict occurred for ALT+SHIFT+D R:
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.debug,Debug on Server,
+		Debug the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.wst.server.launchShortcut.debug"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.debug,Debug RAP Application,
+		Debug RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.rap.tools.launch.RAPLaunchShortcut.debug"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-03-02 09:54:31.877
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\user'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2023-03-02 17:22:51.582 -----------------------------------------------
+eclipse.buildId=4.16.1.202210240748
+java.version=17.0.4.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2023-03-02 17:23:00.753
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-03-02 17:23:00.753
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-03-02 17:23:00.753
+!MESSAGE A conflict occurred for ALT+SHIFT+X R:
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.run,Run on Server,
+		Run the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.wst.server.launchShortcut.run"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.run,Run RAP Application,
+		Run RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.rap.tools.launch.RAPLaunchShortcut.run"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-03-02 17:23:00.753
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-03-02 17:23:00.753
+!MESSAGE A conflict occurred for ALT+SHIFT+D R:
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.debug,Debug on Server,
+		Debug the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.wst.server.launchShortcut.debug"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.debug,Debug RAP Application,
+		Debug RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.rap.tools.launch.RAPLaunchShortcut.debug"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-03-02 17:23:02.886
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\user'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2023-03-03 09:12:03.420 -----------------------------------------------
+eclipse.buildId=4.16.1.202210240748
+java.version=17.0.4.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2023-03-03 09:12:18.135
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-03-03 09:12:18.135
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-03-03 09:12:18.135
+!MESSAGE A conflict occurred for ALT+SHIFT+X R:
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.run,Run on Server,
+		Run the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.wst.server.launchShortcut.run"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.run,Run RAP Application,
+		Run RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.rap.tools.launch.RAPLaunchShortcut.run"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-03-03 09:12:18.135
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-03-03 09:12:18.135
+!MESSAGE A conflict occurred for ALT+SHIFT+D R:
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.debug,Debug on Server,
+		Debug the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.wst.server.launchShortcut.debug"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.debug,Debug RAP Application,
+		Debug RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.rap.tools.launch.RAPLaunchShortcut.debug"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-03-03 09:12:20.593
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\user'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2023-03-07 11:56:23.449 -----------------------------------------------
+eclipse.buildId=4.16.1.202210240748
+java.version=17.0.4.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.core.resources 4 567 2023-03-07 11:56:36.396
 !MESSAGE Workspace restored, but some problems occurred.
-!SUBENTRY 1 org.eclipse.core.resources 4 567 2023-02-23 23:16:35.873
+!SUBENTRY 1 org.eclipse.core.resources 4 567 2023-03-07 11:56:36.396
 !MESSAGE Could not read metadata for '.org.eclipse.egit.core.cmp'.
 !STACK 1
 org.eclipse.core.internal.resources.ResourceException(/.org.eclipse.egit.core.cmp)[567]: java.lang.Exception: The project description file (.project) for '.org.eclipse.egit.core.cmp' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
@@ -1286,7 +516,7 @@ org.eclipse.core.internal.resources.ResourceException(/.org.eclipse.egit.core.cm
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
-!SUBENTRY 2 org.eclipse.core.resources 4 567 2023-02-23 23:16:35.874
+!SUBENTRY 2 org.eclipse.core.resources 4 567 2023-03-07 11:56:36.397
 !MESSAGE The project description file (.project) for '.org.eclipse.egit.core.cmp' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
 !STACK 0
 java.lang.Exception: The project description file (.project) for '.org.eclipse.egit.core.cmp' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
@@ -1341,9 +571,9 @@ java.lang.Exception: The project description file (.project) for '.org.eclipse.e
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
 
-!ENTRY org.eclipse.jface 2 0 2023-02-23 23:16:38.656
+!ENTRY org.eclipse.jface 2 0 2023-03-07 11:56:39.088
 !MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2023-02-23 23:16:38.657
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-03-07 11:56:39.088
 !MESSAGE A conflict occurred for CTRL+SHIFT+T:
 Binding(CTRL+SHIFT+T,
 	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
@@ -1361,7 +591,25 @@ Binding(CTRL+SHIFT+T,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2023-02-23 23:16:38.657
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-03-07 11:56:39.088
+!MESSAGE A conflict occurred for ALT+SHIFT+X R:
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.run,Run on Server,
+		Run the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.wst.server.launchShortcut.run"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.run,Run RAP Application,
+		Run RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.rap.tools.launch.RAPLaunchShortcut.run"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-03-07 11:56:39.088
 !MESSAGE A conflict occurred for ALT+SHIFT+R:
 Binding(ALT+SHIFT+R,
 	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
@@ -1379,374 +627,61 @@ Binding(ALT+SHIFT+R,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-03-07 11:56:39.088
+!MESSAGE A conflict occurred for ALT+SHIFT+D R:
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.debug,Debug on Server,
+		Debug the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.wst.server.launchShortcut.debug"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.debug,Debug RAP Application,
+		Debug RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.rap.tools.launch.RAPLaunchShortcut.debug"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
 
-!ENTRY org.eclipse.egit.ui 2 0 2023-02-23 23:16:41.094
+!ENTRY org.eclipse.egit.ui 2 0 2023-03-07 11:56:41.601
 !MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\slows'. If this is
+user global configuration and to define the default location to store repositories: 'C:\Users\user'. If this is
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
 
-!ENTRY org.eclipse.e4.ui.workbench 2 0 2023-02-23 23:16:41.162
-!MESSAGE Removing PartDescriptorImpl with the "org.eclipse.dltk.debug.ui.dbgpLogView" id and the "Script Debug Log" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
+!ENTRY org.eclipse.php.debug.core 4 4 2023-03-07 11:56:42.021
+!MESSAGE The debug port 9000 is in use. Please select a different port for the debugger.
 
-!ENTRY org.eclipse.e4.ui.workbench 2 0 2023-02-23 23:16:41.163
-!MESSAGE Removing PartDescriptorImpl with the "org.eclipse.dltk.debug.ui.ScriptDisplayView" id and the "Interactive Console" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
+!ENTRY org.eclipse.php.debug.core 4 4 2023-03-07 11:56:42.022
+!MESSAGE Could not open a broadcast port on: 20080 (port might be in use). Please select a different port number
 
-!ENTRY org.eclipse.e4.ui.workbench 2 0 2023-02-23 23:16:41.164
-!MESSAGE Removing PartDescriptorImpl with the "org.eclipse.dltk.testing.ResultView" id and the "Script Unit Test" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
+!ENTRY org.eclipse.php.debug.core 4 4 2023-03-07 11:56:42.032
+!MESSAGE The debug port 10137 is in use. Please select a different port for the debugger.
 
-!ENTRY org.eclipse.e4.ui.workbench 2 0 2023-02-23 23:16:41.165
-!MESSAGE Removing PartDescriptorImpl with the "org.eclipse.dltk.ui.ScriptExplorer" id and the "Script Explorer" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
-
-!ENTRY org.eclipse.e4.ui.workbench 2 0 2023-02-23 23:16:41.166
-!MESSAGE Removing PartDescriptorImpl with the "org.eclipse.dltk.callhierarchy.view" id and the "Call Hierarchy" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
-
-!ENTRY org.eclipse.e4.ui.workbench 2 0 2023-02-23 23:16:41.167
-!MESSAGE Removing PartDescriptorImpl with the "org.eclipse.dltk.ui.TypeHierarchy" id and the "Type Hierarchy" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
-
-!ENTRY org.eclipse.e4.ui.workbench 2 0 2023-02-23 23:16:41.168
-!MESSAGE Removing PartDescriptorImpl with the "org.eclipse.graphiti.ui.internal.editor.thumbnailview" id and the "Miniature View" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
-
-!ENTRY org.eclipse.e4.ui.workbench 2 0 2023-02-23 23:16:41.169
-!MESSAGE Removing PartDescriptorImpl with the "org.eclipse.debug.ui.PHPDebugOutput" id and the "Debug Output" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
-
-!ENTRY org.eclipse.e4.ui.workbench 2 0 2023-02-23 23:16:41.172
-!MESSAGE Removing PartDescriptorImpl with the "org.eclipse.debug.ui.PHPBrowserOutput" id and the "Browser Output" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
-
-!ENTRY org.eclipse.e4.ui.workbench 2 0 2023-02-23 23:16:41.173
-!MESSAGE Removing PartDescriptorImpl with the "org.eclipse.php.debug.ui.CodeCoverageView" id and the "Code Coverage" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
-
-!ENTRY org.eclipse.e4.ui.workbench 2 0 2023-02-23 23:16:41.173
-!MESSAGE Removing PartDescriptorImpl with the "org.eclipse.php.ui.functions" id and the "PHP Functions" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
-
-!ENTRY org.eclipse.e4.ui.workbench 2 0 2023-02-23 23:16:41.175
-!MESSAGE Removing PartDescriptorImpl with the "org.eclipse.php.ui.projectOutline" id and the "PHP Project Outline" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
-
-!ENTRY org.eclipse.ui 2 2 2023-02-23 23:16:44.209
+!ENTRY org.eclipse.ui 2 2 2023-03-07 11:56:56.205
 !MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
-!SESSION 2023-02-27 10:07:09.637 -----------------------------------------------
-eclipse.buildId=4.16.1.202210240748
-java.version=17.0.4.1
-java.vendor=Eclipse Adoptium
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
-Framework arguments:  -product org.springframework.boot.ide.branding.sts4
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
 
-!ENTRY org.eclipse.core.resources 4 567 2023-02-27 10:07:29.657
-!MESSAGE Workspace restored, but some problems occurred.
-!SUBENTRY 1 org.eclipse.core.resources 4 567 2023-02-27 10:07:29.657
-!MESSAGE Could not read metadata for '.org.eclipse.egit.core.cmp'.
-!STACK 1
-org.eclipse.core.internal.resources.ResourceException(/.org.eclipse.egit.core.cmp)[567]: java.lang.Exception: The project description file (.project) for '.org.eclipse.egit.core.cmp' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
-	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
-	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
-	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:908)
-	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:895)
-	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:875)
-	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:731)
-	at org.eclipse.core.internal.resources.SaveManager.startup(SaveManager.java:1587)
-	at org.eclipse.core.internal.resources.Workspace.startup(Workspace.java:2547)
-	at org.eclipse.core.internal.resources.Workspace.open(Workspace.java:2252)
-	at org.eclipse.core.resources.ResourcesPlugin$WorkspaceInitCustomizer.addingService(ResourcesPlugin.java:571)
-	at org.eclipse.core.resources.ResourcesPlugin$WorkspaceInitCustomizer.addingService(ResourcesPlugin.java:1)
-	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:943)
-	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1)
-	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256)
-	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:183)
-	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:321)
-	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:264)
-	at org.eclipse.core.resources.ResourcesPlugin.start(ResourcesPlugin.java:545)
-	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:818)
-	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:1)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
-	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:810)
-	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:767)
-	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
-	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
-	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
-	at org.eclipse.osgi.container.Module.start(Module.java:468)
-	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:513)
-	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
-	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:570)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:397)
-	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass0(BundleLoader.java:496)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:416)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:153)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
-!SUBENTRY 2 org.eclipse.core.resources 4 567 2023-02-27 10:07:29.658
-!MESSAGE The project description file (.project) for '.org.eclipse.egit.core.cmp' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
-!STACK 0
-java.lang.Exception: The project description file (.project) for '.org.eclipse.egit.core.cmp' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
-	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
-	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
-	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:908)
-	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:895)
-	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:875)
-	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:731)
-	at org.eclipse.core.internal.resources.SaveManager.startup(SaveManager.java:1587)
-	at org.eclipse.core.internal.resources.Workspace.startup(Workspace.java:2547)
-	at org.eclipse.core.internal.resources.Workspace.open(Workspace.java:2252)
-	at org.eclipse.core.resources.ResourcesPlugin$WorkspaceInitCustomizer.addingService(ResourcesPlugin.java:571)
-	at org.eclipse.core.resources.ResourcesPlugin$WorkspaceInitCustomizer.addingService(ResourcesPlugin.java:1)
-	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:943)
-	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1)
-	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256)
-	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:183)
-	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:321)
-	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:264)
-	at org.eclipse.core.resources.ResourcesPlugin.start(ResourcesPlugin.java:545)
-	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:818)
-	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:1)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
-	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:810)
-	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:767)
-	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
-	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
-	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
-	at org.eclipse.osgi.container.Module.start(Module.java:468)
-	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:513)
-	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
-	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:570)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:397)
-	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass0(BundleLoader.java:496)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:416)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:153)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
-
-!ENTRY org.eclipse.jface 2 0 2023-02-27 10:07:31.775
+!ENTRY org.eclipse.jface 2 0 2023-03-07 11:57:09.504
 !MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2023-02-27 10:07:31.775
-!MESSAGE A conflict occurred for CTRL+SHIFT+T:
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
-		Open a type in a Java editor,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-03-07 11:57:09.504
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand,Toggle Line Comment,
 		,
-		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
-		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand"),
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2023-02-27 10:07:31.775
-!MESSAGE A conflict occurred for ALT+SHIFT+X R:
-Binding(ALT+SHIFT+X R,
-	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.run,Run on Server,
-		Run the current selection on a server,
-		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
-		WorkbenchHandlerServiceHandler("org.eclipse.wst.server.launchShortcut.run"),
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(ALT+SHIFT+X R,
-	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.run,Run RAP Application,
-		Run RAP Application,
-		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
-		WorkbenchHandlerServiceHandler("org.eclipse.rap.tools.launch.RAPLaunchShortcut.run"),
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2023-02-27 10:07:31.775
-!MESSAGE A conflict occurred for ALT+SHIFT+R:
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
-		Rename the selected element,
-		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
-		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
-		Rename the selected item,
-		Category(org.eclipse.ui.category.file,File,null,true),
-		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2023-02-27 10:07:31.775
-!MESSAGE A conflict occurred for ALT+SHIFT+D R:
-Binding(ALT+SHIFT+D R,
-	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.debug,Debug on Server,
-		Debug the current selection on a server,
-		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
-		WorkbenchHandlerServiceHandler("org.eclipse.wst.server.launchShortcut.debug"),
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(ALT+SHIFT+D R,
-	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.debug,Debug RAP Application,
-		Debug RAP Application,
-		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
-		WorkbenchHandlerServiceHandler("org.eclipse.rap.tools.launch.RAPLaunchShortcut.debug"),
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-
-!ENTRY org.eclipse.egit.ui 2 0 2023-02-27 10:07:33.860
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\user'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-
-!ENTRY org.eclipse.e4.ui.workbench 2 0 2023-02-27 10:07:33.921
-!MESSAGE Removing PartDescriptorImpl with the "org.eclipse.eclemma.ui.CoverageView" id and the "Coverage" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
-
-!ENTRY org.eclipse.php.debug.core 4 4 2023-02-27 10:07:34.216
-!MESSAGE The debug port 9000 is in use. Please select a different port for the debugger.
-
-!ENTRY org.eclipse.php.debug.core 4 4 2023-02-27 10:07:34.217
-!MESSAGE Could not open a broadcast port on: 20080 (port might be in use). Please select a different port number
-
-!ENTRY org.eclipse.php.debug.core 4 4 2023-02-27 10:07:34.220
-!MESSAGE The debug port 10137 is in use. Please select a different port for the debugger.
-
-!ENTRY org.eclipse.core.resources 4 567 2023-02-27 10:07:40.707
-!MESSAGE The project description file (.project) for 'leadtime' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
-!STACK 0
-java.lang.Exception: The project description file (.project) for 'leadtime' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
-	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
-	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
-	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:908)
-	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:895)
-	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:770)
-	at org.eclipse.core.internal.resources.Project.open(Project.java:1067)
-	at org.eclipse.ui.actions.OpenResourceAction$1.doOpenWithReferences(OpenResourceAction.java:233)
-	at org.eclipse.ui.actions.OpenResourceAction$1.runInWorkspace(OpenResourceAction.java:279)
-	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-!SESSION 2023-02-27 10:08:14.387 -----------------------------------------------
-eclipse.buildId=4.16.1.202210240748
-java.version=17.0.4.1
-java.vendor=Eclipse Adoptium
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
-Framework arguments:  -product org.springframework.boot.ide.branding.sts4
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
-
-!ENTRY org.eclipse.jface 2 0 2023-02-27 10:08:23.940
-!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2023-02-27 10:08:23.940
-!MESSAGE A conflict occurred for CTRL+SHIFT+T:
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
-		Open a type in a Java editor,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
 		,
-		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
-		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
+		WorkbenchHandlerServiceHandler("org.springframework.tooling.boot.ls.ToggleComment"),
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2023-02-27 10:08:23.940
-!MESSAGE A conflict occurred for ALT+SHIFT+X R:
-Binding(ALT+SHIFT+X R,
-	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.run,Run on Server,
-		Run the current selection on a server,
-		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
-		WorkbenchHandlerServiceHandler("org.eclipse.wst.server.launchShortcut.run"),
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(ALT+SHIFT+X R,
-	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.run,Run RAP Application,
-		Run RAP Application,
-		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
-		WorkbenchHandlerServiceHandler("org.eclipse.rap.tools.launch.RAPLaunchShortcut.run"),
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2023-02-27 10:08:23.940
-!MESSAGE A conflict occurred for ALT+SHIFT+R:
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
-		Rename the selected element,
-		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
-		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
-		Rename the selected item,
-		Category(org.eclipse.ui.category.file,File,null,true),
-		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2023-02-27 10:08:23.940
-!MESSAGE A conflict occurred for ALT+SHIFT+D R:
-Binding(ALT+SHIFT+D R,
-	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.debug,Debug on Server,
-		Debug the current selection on a server,
-		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
-		WorkbenchHandlerServiceHandler("org.eclipse.wst.server.launchShortcut.debug"),
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(ALT+SHIFT+D R,
-	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.debug,Debug RAP Application,
-		Debug RAP Application,
-		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
-		WorkbenchHandlerServiceHandler("org.eclipse.rap.tools.launch.RAPLaunchShortcut.debug"),
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-
-!ENTRY org.eclipse.egit.ui 2 0 2023-02-27 10:08:26.011
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\user'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-
-!ENTRY org.eclipse.php.debug.core 4 4 2023-02-27 10:08:26.314
-!MESSAGE The debug port 9000 is in use. Please select a different port for the debugger.
-
-!ENTRY org.eclipse.php.debug.core 4 4 2023-02-27 10:08:26.319
-!MESSAGE Could not open a broadcast port on: 20080 (port might be in use). Please select a different port number
-
-!ENTRY org.eclipse.php.debug.core 4 4 2023-02-27 10:08:26.323
-!MESSAGE The debug port 10137 is in use. Please select a different port for the debugger.
+	org.eclipse.ui.textEditorScope,,,system)

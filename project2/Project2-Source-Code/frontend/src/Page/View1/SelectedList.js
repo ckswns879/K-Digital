@@ -1,8 +1,10 @@
-import { useState, useEffect } from "react";
+import "./View1.css";
+import { useState, useEffect, useCallback } from "react";
 import { useSelector } from 'react-redux';
-import { Link } from "react-router-dom";
+
 import { getSearchResults, addBasket } from "../../API/funcAPI";
 import { Paging } from "../../Component/Paging/Paging";
+import jwtDecode from "jwt-decode";
 
 //리스트 출력, 과거데이터 출력, 장바구니 저장
 //페이징 기능 필요
@@ -10,8 +12,21 @@ import { Paging } from "../../Component/Paging/Paging";
 function SelectedList() {
 
   let { SearchInfo } = useSelector((state) => { return state })
+  const [decode, setDecode] = useState('')  //토큰 해독(memberid)
   const [data, setData] = useState(); //통신 데이터 저장
   const [checkItems, setCheckItems] = useState([]); //체크한 아이템 저장
+
+  useEffect(()=>{    
+    try{
+      setDecode(jwtDecode(sessionStorage.getItem('accessToken')))    
+    } catch(error){
+      console.log("토큰 없음", error)
+    }      
+  },[])
+
+  const fixPrice = useCallback(price => {
+    return parseInt(price.toFixed(0)).toLocaleString();
+  }, []);
 
   //검색조건이 포함된 리스트 호출(통신 호출할지 redux로 필터링 할지 결정못함)
   useEffect(() => {
@@ -31,7 +46,7 @@ function SelectedList() {
   const handleSingleCheck = (checked, id) => {
     if (checked) {
       // 단일 선택 시 체크된 아이템을 배열에 추가
-      setCheckItems(prev => [...prev, id]);
+      setCheckItems([...checkItems, id]);
     } else {
       // 단일 선택 해제 시 체크된 아이템을 제외한 배열 (필터)
       setCheckItems(checkItems.filter((el) => el !== id));
@@ -43,7 +58,7 @@ function SelectedList() {
     if (checked) {
       // 전체 선택 클릭 시 데이터의 모든 아이템(id)를 담은 배열로 checkItems 상태 업데이트
       const idArray = [];
-      data.forEach((el) => idArray.push(el.id));
+      currentPosts.forEach((el) => idArray.push(el.id));
       setCheckItems(idArray);
     }
     else {
@@ -57,18 +72,25 @@ function SelectedList() {
     setData(data.filter((item) =>
       !checkItems.includes(item.id)
     ))
+    alert("삭제되었습니다.")
+    //예외처리 필요
   }
 
   //선택저장 버튼 클릭 (장바구니 추가)
   const addItemBasket = () => {
-    const arr = []
+    const arr = [];
     //선택한 목록을 배열에 추가
-    arr.push(data?.filter((item) => checkItems.includes(item.id)));
+    // arr.push(data?.filter((item) => checkItems.includes(item.id)).map((i)=>[i.id, parseInt(decode.sub)]));
+    data?.filter((item) => checkItems.includes(item.id)).map((i)=>{arr.push([i.id, parseInt(decode.sub)])});
     //배열을 db에 저장
+
     (async () => {
-      await addBasket(arr[0])
+      await addBasket(arr)
         .then((res) => res)
     })();
+    alert("저장되었습니다.");
+    //예외처리 필요
+    window.location.replace("/view3")
   }
 
   //pagination 적용 (react-js-pagination)
@@ -84,6 +106,7 @@ function SelectedList() {
     setIndexOfLastPost(currentpage * postPerPage);
     setIndexOfFirstPost(indexOfLastPost - postPerPage);
     setCurrentPosts(data?.slice(indexOfFirstPost, indexOfLastPost));
+    setCheckItems([]); //페이지 넘겼을 때 전체 선택 체크박스가 클릭되어있는 현상 수정
   }, [currentpage, indexOfFirstPost, indexOfLastPost, data, postPerPage]);
 
   //페이지 변경할때마다 발생하는 이벤트(새로운 페이지 입력)
@@ -94,20 +117,19 @@ function SelectedList() {
   return (
     <>
       <div className="searchList">
-        <table>
+        <table className="searchTable">
           <thead>
             <tr>
               {/* 체크박스 전체 클릭 */}
-              <th><input type={'checkbox'} onChange={(e) => handleAllCheck(e.target.checked)}
-                checked={checkItems?.length === data?.length ? true : false}></input></th>
-              <th>Machinery</th>
-              <th>청구품목</th>
-              <th>Part.No</th>
-              <th>카테고리</th>
-              <th>발주처</th>
-              <th>리드타임(일)</th>
-              <th>견적화폐</th>
-              <th>견적단가</th>
+              <th><input className="th1" type={'checkbox'} onChange={(e) => handleAllCheck(e.target.checked)}
+                checked={checkItems?.length === currentPosts?.length ? true : false}></input></th>
+              <th className="th2">Machinery</th>
+              <th className="th2">청구품목</th>
+              <th className="th2">Part.No</th>
+              <th className="th2">카테고리</th>
+              <th className="th2">발주처</th>
+              <th className="th3">견적화폐</th>
+              <th className="thcost">견적단가</th>
             </tr>
           </thead>
           <tbody>
@@ -117,18 +139,17 @@ function SelectedList() {
               // <tr key={index} onClick={() => setRowdata(rowdata.filter(ritem => ritem.id !== item.id))}>
               <tr key={index} >
                 {/* 체크박스 클릭 */}
-                <td><input type={'checkbox'} onChange={(e) => handleSingleCheck(e.target.checked, item.id)}
+                <td><input className="th1" type={'checkbox'} onChange={(e) => handleSingleCheck(e.target.checked, item.id)}
                   checked={checkItems.includes(item.id) ? true : false}></input></td>
                 {/* 클릭하면 과거 데이터로 이동(뒤로가기하면 view1이 리셋되는 현상 해결해야함) */}
                 {/* 한 행 전체를 link로 걸면 체크박스를 클릭해도 과거데이터로 이동해버림 */}
-                <td><Link to='/view2' state={item}>{item.machinery}</Link></td>
-                <td>{item.items}</td>
-                <td>{item.part1}</td>
-                <td>{item.key2}</td>
-                <td>{item.baljucheo}</td>
-                <td>{item.leadtime}</td>
-                <td>{item.gyeonjeokhwapye}</td>
-                <td>{item.gyeonjeokdanga}</td>
+                <td className="th2">{item.machinery}</td>
+                <td className="th2">{item.items}</td>
+                <td className="th2">{item.part1}</td>
+                <td className="th2">{item.category}</td>
+                <td className="th2">{item.clients}</td>
+                <td className="th3">{item.currency}</td>
+                <td className="thcost">{fixPrice(parseInt(item.esti_unit_price))}</td>
               </tr>
             ))
               : <></>}
@@ -137,8 +158,8 @@ function SelectedList() {
       </div>
       {/* 페이징 기능 */}
       {count && <Paging page={currentpage} count={count} setPage={setPage} />}
-      {checkItems.length > 0 && <button onClick={removeRow}>선택 삭제</button>}
-      {checkItems.length > 0 && <button onClick={addItemBasket}>선택 저장</button>}
+      {checkItems.length > 0 && <button className="pageButton" onClick={removeRow}>선택 삭제</button>}
+      {checkItems.length > 0 && <button className="pageButton" onClick={addItemBasket}>선택 저장</button>}
     </>
   );
 }

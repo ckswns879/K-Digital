@@ -6,10 +6,10 @@ const AuthLayout = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    if (!localStorage.getItem('accessToken')) {
+    if (!sessionStorage.getItem('accessToken')) {
       alert('로그인 정보가 없습니다.')
       //토큰없으면 로그인화면으로 이동
-      navigate("/", { state: pathname });
+      navigate("/login", { state: pathname });
     }
   }, []);
 

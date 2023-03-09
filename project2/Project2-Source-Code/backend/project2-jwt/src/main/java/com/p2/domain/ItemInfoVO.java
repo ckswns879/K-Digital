@@ -1,14 +1,23 @@
 package com.p2.domain;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class ItemInfoVO {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "item_id")
 	private Long id;
 	private String subjects; // Subject
 	private String machinery; // Machinery
@@ -22,12 +31,21 @@ public class ItemInfoVO {
 	private String currency; // 견적화폐
 	private int leadtime; // 리드타임
 
+	@OneToMany(mappedBy = "items", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
+	@JsonIgnore
+	private List<PaymentLogVO> payment;
+
+	@OneToMany(mappedBy = "items", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
+	@JsonIgnore
+	private List<BasketVO> basket;
+
 	public ItemInfoVO() {
 		// TODO Auto-generated constructor stub
 	}
 
 	public ItemInfoVO(Long id, String subjects, String machinery, String assembly, String item, String part1,
-			String part2, String key2, int esti_unit_price, String clients, String currency, int leadtime) {
+			String part2, String key2, int esti_unit_price, String clients, String currency, int leadtime,
+			List<PaymentLogVO> payment, List<BasketVO> basket) {
 		super();
 		this.id = id;
 		this.subjects = subjects;
@@ -41,13 +59,16 @@ public class ItemInfoVO {
 		this.clients = clients;
 		this.currency = currency;
 		this.leadtime = leadtime;
+		this.payment = payment;
+		this.basket = basket;
 	}
 
 	@Override
 	public String toString() {
 		return "ItemInfoVO [id=" + id + ", subjects=" + subjects + ", machinery=" + machinery + ", assembly=" + assembly
 				+ ", item=" + item + ", part1=" + part1 + ", part2=" + part2 + ", key2=" + key2 + ", esti_unit_price="
-				+ esti_unit_price + ", clients=" + clients + ", currency=" + currency + ", leadtime=" + leadtime + "]";
+				+ esti_unit_price + ", clients=" + clients + ", currency=" + currency + ", leadtime=" + leadtime
+				+ ", payment=" + payment + ", basket=" + basket + "]";
 	}
 
 	public Long getId() {
@@ -144,6 +165,22 @@ public class ItemInfoVO {
 
 	public void setLeadtime(int leadtime) {
 		this.leadtime = leadtime;
+	}
+
+	public List<PaymentLogVO> getPayment() {
+		return payment;
+	}
+
+	public void setPayment(List<PaymentLogVO> payment) {
+		this.payment = payment;
+	}
+
+	public List<BasketVO> getBasket() {
+		return basket;
+	}
+
+	public void setBasket(List<BasketVO> basket) {
+		this.basket = basket;
 	}
 
 }

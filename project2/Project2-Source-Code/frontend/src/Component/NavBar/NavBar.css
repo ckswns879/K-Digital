@@ -1,4 +1,45 @@
-nav {
+.wrapper {
   display: flex;
   flex-direction: row;
+  align-items: end;
+  justify-content: space-between;
+  padding: 0 2vw 0 2vw;
+}
+
+.logo {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  top: 0;
+}
+
+.navIcon {
+  height: 23px;
+  width: 23px;
+  color: #6255f6;
+  padding: 13px;
+  border-radius: 50%;
+  margin: 10px 5px 2px 10px;
+  background-color: #fff;
+}
+
+.personal {
+  border: 0;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+}
+
+.navIcon:hover {
+  background-color : #74e88b;
+  padding: 13px;
+}
+
+.toggleList {
+  position: absolute;
+  top: 65px;
+  right: 20px;
+  text-align: right;
+  font-weight: 100;
+  font-size: large;
 }

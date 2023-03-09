@@ -1,15 +1,19 @@
 package com.p2.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class PaymentLogVO {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "payment_id")
 	private Long id;
 	private String item; // 청구품목
 	private String invoice; // 청구서번호
@@ -18,11 +22,19 @@ public class PaymentLogVO {
 	private int order_quantity; // 발주수량
 	private int order_amount; // 발주금액
 
+	@ManyToOne
+	@JoinColumn(name = "item_id", nullable = false, updatable = false)
+	private ItemInfoVO items;
+
+	@ManyToOne
+	@JoinColumn(name = "member_id", nullable = false, updatable = false)
+	private MemberVO member;
+
 	public PaymentLogVO() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public PaymentLogVO(Long id, String item, String invoice, String leadtime, String clients, int order_quantity,
+	public PaymentLogVO(long id, String item, String invoice, String leadtime, String clients, int order_quantity,
 			int order_amount) {
 		super();
 		this.id = id;
@@ -41,11 +53,11 @@ public class PaymentLogVO {
 				+ "]";
 	}
 
-	public Long getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 

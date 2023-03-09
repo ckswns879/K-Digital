@@ -1,5 +1,30 @@
-import { NotAuthInstance, authInstance } from './indexAPI'
+import { NotAuthInstance, authInstance, flaskInstance } from './indexAPI'
 //생성된 axios인스턴스를 사용해 API호출
+
+//검색용 리스트 호출
+export const getList = async () => {
+  try {
+    const { data } = await NotAuthInstance.get(
+        "get",
+      )
+    return data
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+//admin 화면 item입력정보 db 저장
+export const addItem = async (requestBody) => {
+  try {
+    const { data } = await authInstance.post(
+        "additem",
+        requestBody
+      )
+    return data
+  } catch (error) {
+    console.error(error)
+  }
+}
 
 //회원가입
 export const signup = async (requestBody) => {
@@ -56,7 +81,7 @@ export const getSearchResults = async (requestBody) => {
 export const addBasket = async (requestBody) => {
   try {
     const { data } = await authInstance.post(
-        "basket",
+        "addbasket",
         requestBody
       )
     return data
@@ -90,15 +115,55 @@ export const delBasket = async (requestBody) => {
   }
 }
 
-// post method example
-// export const addLog = async (logInfo) => {
-//   try {
-//     const { data } = await defaultInstance.post(
-//         "searchlog",
-//         logInfo
-//       )
-//     return data
-//   } catch (error) {
-//     console.error(error)
-//   }
-// }
+//Flask 통신용 =========================
+
+//카테고리 분류
+export const classifier = async (requestBody) => {
+  try{
+    const {data}  = await flaskInstance.post(
+      'classifier',
+      requestBody
+    )
+    return data
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+//리드타임 예측
+export const prediction = async (requestBody) => {
+  try{
+    const {data}  = await flaskInstance.post(
+      'prediction',
+      requestBody
+    )
+    return data
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+export const predictAll = async (requestBody) => {
+  try{
+    const {data}  = await flaskInstance.post(
+      'predictAll',
+      requestBody
+    )
+    return data
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+//품목 추천
+export const recommendation = async (requestBody) => {
+  try{
+    const {data}  = await flaskInstance.post(
+      'recommendation',
+      requestBody
+    )
+    return data
+  } catch (error) {
+    console.log(error)
+  }
+}

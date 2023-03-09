@@ -1,7 +1,8 @@
 import axios from 'axios'
 
 //axios 인스턴스 생성
-const BASE_URL = "http://localhost:8080/data/"
+const BASE_URL = "http://10.125.121.177:8080/data/"
+const BASE_FLASK_URL = "http://10.125.121.177:5000/data/"
 
 const axiosAPI = (url, options) => {
   const instance = axios.create({ baseURL: url, ...options })
@@ -9,7 +10,7 @@ const axiosAPI = (url, options) => {
 }
 
 const axiosAuthAPI = (url, options) => {
-  const token = localStorage.getItem('accessToken') || ''
+  const token = sessionStorage.getItem('accessToken') || ''
   const instance = axios.create({
     baseURL: url,
     headers: { Authorization: `Bearer ${token}` }, //bearer를 사용하는건 암묵적 약속
@@ -29,13 +30,13 @@ const axiosAuthAPI = (url, options) => {
       const originalRequest = config;
   
       if (status === 401) {
-        const accessToken = localStorage.getItem('accessToken');
-        const refreshToken = localStorage.getItem('refreshToken');
+        const accessToken = sessionStorage.getItem('accessToken');
+        const refreshToken = sessionStorage.getItem('refreshToken');
         
         try {
           const { data } = await axios({
             method: 'post',
-            url: "http://localhost:8080/data/auth/reissue",
+            url: "http://10.125.121.177:8080/data/auth/reissue",
             data: { "accessToken": accessToken, "refreshToken": refreshToken },
           });
           console.log(data)
@@ -46,8 +47,8 @@ const axiosAuthAPI = (url, options) => {
             'Content-Type': 'application/json',
             Authorization: 'Bearer ' + newAccessToken,
           };
-          localStorage.setItem('accessToken', newAccessToken);
-          localStorage.setItem('refreshToken', newRefreshToken);
+          sessionStorage.setItem('accessToken', newAccessToken);
+          sessionStorage.setItem('refreshToken', newRefreshToken);
           return await axios(originalRequest);
         } catch (err) {
           new Error(err);
@@ -61,6 +62,7 @@ const axiosAuthAPI = (url, options) => {
 
 
 export const NotAuthInstance = axiosAPI(BASE_URL)
+export const flaskInstance = axiosAuthAPI(BASE_FLASK_URL)
 export const authInstance = axiosAuthAPI(BASE_URL)
 
 

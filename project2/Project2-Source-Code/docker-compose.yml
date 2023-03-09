@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  flask:
+    build:
+      context: ./Data_Analysis/flask
+      dockerfile: Dockerfile
+    image: kyunggwan/flask-app:latest
+  # react:
+  #   build:
+  #     context: ./frontend
+  #     dockerfile: Dockerfile
+  #   image: upcoderk/react-app:latest  
+  spring-boot:
+    build:
+      context: ./backend/leadtime
+      dockerfile: Dockerfile
+    image: kyunggwan/spring-boot-app:latest
